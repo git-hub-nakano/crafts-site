@@ -1,0 +1,1926 @@
+{
+  "meta": {
+    "project": "crafts: Fulfill 梅田オフィスのバーチャルオフィス",
+    "drawing": {
+      "file": "data/floor_raw_view.png",
+      "title": "事務所改修工事 平面図",
+      "scale": "1/100",
+      "date": "2024-03-10",
+      "by": "struction"
+    },
+    "units": "mm",
+    "origin": "外形の左下",
+    "axes": "X は図面の右、Y は図面の上、Z は上",
+    "version": 7,
+    "note": "段1 で全館に広げた。上段は執務エリア r_office、その西の会議室 r_conf_n と個室ブース r_booth_1〜6、東のラウンジ r_lounge、改修対象外の北西の部屋 r_nw_existing、中段は廊下 r_corridor、下段は GYM r_gym、会議室 A r_conf_a、会議室 B r_conf_b、東の小室 r_small。図面の実測は拡大図 data/floor_zoom_view.png（16.329 mm/px）で行い、根拠は docs/drawing_readings.md に残す。最初の図面 data/floor_raw_view.png の換算は X 26.465、Y 26.457 mm/px、原点は画素 (250.5, 829.5)。"
+  },
+  "assumptions": {
+    "ch": {
+      "value": 2395,
+      "source": "drawing:図枠の CH=2395",
+      "label": "天井高"
+    },
+    "partition_t": {
+      "value": 90,
+      "source": "drawing:間仕切り壁 LGS65+PB12.5（両面）、寸法連鎖の 90",
+      "label": "間仕切壁の厚さ"
+    },
+    "outer_wall_t": {
+      "value": 150,
+      "source": "drawing:拡大図の外周の二重線の間隔 9〜10 px（docs/drawing_readings.md「寸法線の起点は外壁の内面」）",
+      "label": "外周壁の厚さ",
+      "note": "北は約 163、南・東・西は約 147。4 辺とも 150 に丸めた（北の差は 13 mm）。外壁は外形（内法）の外側に立つ。"
+    },
+    "movable_t": {
+      "value": 60,
+      "source": "assumed",
+      "label": "可動間仕切の厚さ",
+      "note": "下段 X 連鎖の 60（会議室の間の「仕切可能」の位置）から。"
+    },
+    "door_h": {
+      "value": 2000,
+      "source": "assumed",
+      "label": "扉の高さ",
+      "note": "図面に無い。確認点 3 で確かめる。"
+    },
+    "door_w": {
+      "value": 800,
+      "source": "drawing:扉記号の画素実測（壁の切れ目 29 px ≈ 770、円弧の半径 31 px ≈ 820）",
+      "label": "扉の幅",
+      "note": "図面に扉幅の数字は無い。画素の 770〜820 の間で、既製の片開き扉の 800 に合わせた。"
+    },
+    "booth_door_w": {
+      "value": 625,
+      "source": "drawing:ブースの扉の開きの弧の半径 38.3 px ≈ 625（docs/drawing_readings.md「上段の会議室とブース」）",
+      "label": "ブースの扉の幅",
+      "note": "6 室とも同じ形の弧で、枠の間は 39 px ≈ 637。図面に扉幅の数字は無い。policy の door_min_width_mm 750 を下回るので、waiver wv_booth_door_1〜6 で許す。"
+    },
+    "window_sill": {
+      "value": 800,
+      "source": "assumed",
+      "label": "窓の腰高",
+      "note": "窓が北と東（曲面を含む）にあることは user:2026-09-30 の回答で決まった。腰高は図面にも回答にも無く、腰窓の一般的な値を置いた。"
+    },
+    "window_h": {
+      "value": 1500,
+      "source": "assumed",
+      "label": "窓の高さ",
+      "note": "上端は 800+1500=2300 で天井高 2395 の内側。"
+    },
+    "desk_h": {
+      "value": 720,
+      "source": "assumed",
+      "label": "机の高さ",
+      "note": "JIS の事務机の標準。"
+    },
+    "chair_w": {
+      "value": 600,
+      "source": "assumed",
+      "label": "椅子の幅",
+      "note": "図面の椅子記号は幅 ≈ 22 px（580 mm）。"
+    },
+    "chair_d": {
+      "value": 600,
+      "source": "assumed",
+      "label": "椅子の奥行"
+    },
+    "chair_h": {
+      "value": 950,
+      "source": "assumed",
+      "label": "椅子の高さ（背の上端）"
+    },
+    "light_pitch": {
+      "value": 2400,
+      "source": "assumed",
+      "label": "ベースライトの格子の間隔",
+      "note": "図面に照明の記号が無い（天井は既存流用）。段1 の確認点 3 で確かめる。"
+    },
+    "light_lm": {
+      "value": 4000,
+      "source": "assumed",
+      "label": "ベースライト 1 台の光束",
+      "note": "1200×300 の LED ベースライトの一般的な値。"
+    },
+    "corridor_light_pitch": {
+      "value": 1800,
+      "source": "assumed",
+      "label": "廊下のダウンライトの間隔",
+      "note": "天井は既存流用で、廊下の照明は図面に無い。廊下は見学の出発点なので暗いままにできない。確認点 3 で確かめる。"
+    },
+    "corridor_light_lm": {
+      "value": 800,
+      "source": "assumed",
+      "label": "廊下のダウンライト 1 台の光束",
+      "note": "φ150 の LED ダウンライトの一般的な値。"
+    },
+    "counter_h": {
+      "value": 1000,
+      "source": "assumed",
+      "label": "カウンターの天板の高さ",
+      "note": "図面に高さが無い。北のカウンターは椅子（chair_stool）と組むハイカウンター、ラウンジの曲面のカウンターも同じ高さとみた。"
+    },
+    "stool_h": {
+      "value": 1050,
+      "source": "assumed",
+      "label": "カウンターの椅子の高さ（背の上端）",
+      "note": "天板 1000 に座面 750 前後のハイスツールを合わせ、背の上端を 1050 とした。"
+    },
+    "copier_h": {
+      "value": 1150,
+      "source": "assumed",
+      "label": "複合機の高さ",
+      "note": "図面は箱だけ。A3 複合機のフィニッシャー無しの一般的な高さ。"
+    },
+    "fridge_h": {
+      "value": 1800,
+      "source": "assumed",
+      "label": "冷蔵庫の高さ",
+      "note": "平面 710 × 790 の業務用 2 ドアの一般的な高さ。"
+    },
+    "bench_h": {
+      "value": 420,
+      "source": "assumed",
+      "label": "ラウンジのベンチの座面の高さ",
+      "note": "緑の帯は背の無いベンチとみた。座面の一般的な高さ。"
+    },
+    "cafe_chair_h": {
+      "value": 800,
+      "source": "assumed",
+      "label": "ラウンジの椅子の高さ（背の上端）",
+      "note": "小さな天板（700 前後の高さ）に合わせる肘なしの椅子の一般的な値。"
+    }
+  },
+  "outline": {
+    "id": "outline",
+    "w": 23898,
+    "d": 11972,
+    "d_east": 11990,
+    "polygon": [[0, 0], [23898, 0], [23898, 11972], [0, 11972]],
+    "source": "drawing:下端の全体寸法 23898、左端の全体寸法 11972、右端の全体寸法 11990",
+    "note": "外形は左端の 11972 で矩形に置く。右端の全体寸法 11990 との 18 mm の差は本物で、下の目盛りは左 829.5 px・右 830.0 px、下段の内訳も左 3103 に対し右 2461+660=3121 と 18 違う。外形の南辺が東で 18 mm 下がっているとみられる（画素では 0.5 px）。多角形の南東の角を y=−18 にするかはユーザーに確かめるまで保留し、残差は waiver wv_outline_east で記録する。北西の空白（6461 の区画）が賃借外かは確認点 3。"
+  },
+  "walls": [
+    {
+      "id": "w_ext_s",
+      "kind": "outer",
+      "a": [-150, -75],
+      "b": [24048, -75],
+      "thickness": "@outer_wall_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:外形の南辺 0 − outer_wall_t/2。内面が外形線に来る（docs/drawing_readings.md「寸法線の起点は外壁の内面」）",
+      "note": "東西の端は外壁の外面の角まで延ばした（−150〜24048）。外形の南辺が東で 18 mm 下がる件（waiver wv_outline_east）は角を動かすか確かめるまで反映しない。"
+    },
+    {
+      "id": "w_ext_e",
+      "kind": "outer",
+      "a": [23973, 0],
+      "b": [23973, 10858],
+      "thickness": "@outer_wall_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:外形の東辺 23898 + outer_wall_t/2（docs/drawing_readings.md「寸法線の起点は外壁の内面」）",
+      "note": "北は北東の曲面 w_ext_ne の端 y=10858 で終わる。南の 18 mm の下がり（waiver wv_outline_east）は角を動かすか確かめるまで反映しない。"
+    },
+    {
+      "id": "w_ext_n",
+      "kind": "outer",
+      "a": [21702, 12047],
+      "b": [-150, 12047],
+      "thickness": "@outer_wall_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:外形の北辺 11972 + outer_wall_t/2（docs/drawing_readings.md「寸法線の起点は外壁の内面」）",
+      "note": "北の 1000（壁から島の北端）は外形線（外壁の内面）から測っていて、Y 連鎖 c_office_y が閉じる。東は北東の曲面 w_ext_ne が接する x=21702 で終わり、西は外壁の外面の角 −150 まで延ばした。outer_wall_t を変えたら中心線の 12047 も直す。"
+    },
+    {
+      "id": "w_ext_w",
+      "kind": "outer",
+      "a": [-75, 11972],
+      "b": [-75, 0],
+      "thickness": "@outer_wall_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:外形の西辺 0 − outer_wall_t/2（docs/drawing_readings.md「寸法線の起点は外壁の内面」）",
+      "note": "下段の西端の 100 は外壁の内側にある GYM の西の壁（段1 で描く）。"
+    },
+    {
+      "id": "w_ext_ne",
+      "kind": "outer",
+      "a": [23973, 10858],
+      "b": [21702, 12047],
+      "center": [21702, 9284],
+      "thickness": "@outer_wall_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:docs/drawing_readings.md「北東の曲面の外壁」の円の当てはめ（中心 (21702, 9284)、外面の半径 2839）",
+      "note": "中心線の半径は 2763（外面 2838、内面 2688）。b は北の壁 w_ext_n の中心線 12047 に接し、a は東の壁 w_ext_e の中心線 23973 と交わる。"
+    },
+    {
+      "id": "w_corr_s",
+      "kind": "glass",
+      "a": [0, 3148],
+      "b": [21193, 3148],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "glass_clear",
+      "source": "user:2026-10-01 赤枠（廊下の北の壁の執務エリアに面した部分と、南の壁の GYM・会議室 A・B に面した部分）をガラスの壁に",
+      "note": "西端から、会議室 B と東の小室の間の壁 w_conf_bs の中心 21193 まで。GYM・会議室 A・B の廊下側。"
+    },
+    {
+      "id": "w_corr_s_e",
+      "kind": "partition",
+      "a": [21193, 3148],
+      "b": [23898, 3148],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:左 Y 連鎖の 3103 と 90（中心 3103+45）",
+      "note": "東の小室の前。w_conf_bs の中心 21193 から東の外壁まで。赤枠の外なので普通の壁のまま。"
+    },
+    {
+      "id": "w_corr_n",
+      "kind": "partition",
+      "a": [0, 4500],
+      "b": [10986, 4500],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:左 Y 連鎖の 3103+90+1262 と 90（中心 4455+45）",
+      "note": "廊下の北の壁。西は外形まで伸ばした仮置き。東は東のラウンジの前で終わる（ラウンジの南は廊下へ開いている）。 東端は 10986 で、そこから東は w_corr_n_glass（2026-10-01 のユーザーの指示でガラス）。"
+    },
+    {
+      "id": "w_corr_n_glass",
+      "kind": "glass",
+      "a": [10986, 4500],
+      "b": [20981, 4500],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "glass_clear",
+      "source": "user:2026-10-01 赤枠（廊下の北の壁の執務エリアに面した部分と、南の壁の GYM・会議室 A・B に面した部分）をガラスの壁に",
+      "note": "西端は会議室の東のガラス壁 w_conf_e の中心 10986、東端は 20981（執務エリアの東のガラス壁 w_off_e_glass に取り付く）。"
+    },
+    {
+      "id": "w_off_w",
+      "kind": "partition",
+      "a": [6416, 11972],
+      "b": [6416, 4545],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:上段 X 連鎖の 6461（内面）− partition_t/2",
+      "note": "北西の空白との境で、南はブースの西の壁に続く。画素では 489 px と 495 px の 2 本線（約 160）で、厚さは間仕切の 90 と仮に置いた。北西の空白が賃借外かは確認点 3。"
+    },
+    {
+      "id": "w_booth_n",
+      "kind": "partition",
+      "a": [6416, 9840],
+      "b": [9765, 9840],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:ブースと会議室の北の壁（画素 456〜459 px の中心 457.5 → Y 9842）"
+    },
+    {
+      "id": "w_conf_jog",
+      "kind": "partition",
+      "a": [9765, 9840],
+      "b": [9765, 9210],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:コピー機の入る凹み（画素 618〜621 px の中心 619.5 → X 9766）"
+    },
+    {
+      "id": "w_conf_n",
+      "kind": "partition",
+      "a": [9765, 9210],
+      "b": [10986, 9210],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:会議室の北の壁（画素 480〜483 px の中心 481.5 → Y 9207）"
+    },
+    {
+      "id": "w_conf_e",
+      "kind": "glass",
+      "a": [10986, 9210],
+      "b": [10986, 4545],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "glass_clear",
+      "source": "derived:東面 11031 = 20891 − (1200+1400+1600+1400+1600+1400+1260)。中心線は −45",
+      "note": "図面に位置の寸法が無く、X 連鎖 c_office_x の赤字から逆算した。最初の図面の画素は中心 665.5 px → 10983（差 3 mm）。紫の線（拡大図 y=271〜552 px、Y 4570〜9157）がこの壁のほぼ全長にあり、紫はガラスの間仕切り（user:2026-09-30 の回答）。"
+    },
+    {
+      "id": "w_off_e",
+      "kind": "partition",
+      "a": [20936, 10283],
+      "b": [20936, 11972],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:上段 X 連鎖 6461+1810+90+12530 = 20891（西面）と 90",
+      "note": "カウンター側の間仕切のうち紫でない北の灰色の部分（拡大図 y≈99〜202 px）。北の 680 は図面では柱型の面の細線で、閉じた箱にするため北の壁まで延ばした。"
+    },
+    {
+      "id": "w_off_e_glass",
+      "kind": "glass",
+      "a": [20936, 4545],
+      "b": [20936, 10283],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "glass_clear",
+      "source": "user:2026-09-30 紫の線はガラスの間仕切り",
+      "note": "範囲は拡大図の紫の線 y=202〜553 px（Y 10283〜4554、docs/drawing_readings.md「東のラウンジ」）。X は w_off_e と同じ 20891〜20981。"
+    },
+    {
+      "id": "w_booth_e",
+      "kind": "partition",
+      "a": [7703, 9795],
+      "b": [7703, 4545],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:ブースの東の線 x=616 px（西面 7658）と、会議室の赤字 1290（机の西端 x=700.5 px → 9038 から 1290 西が東面 7748）。中心は 7703（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "ブース 6 室と会議室 r_conf_n の境。北は w_booth_n の南面 9795、南は w_corr_n の北面 4545 まで。扉 d_booth_1〜6 が入る。"
+    },
+    {
+      "id": "w_booth_1",
+      "kind": "partition",
+      "a": [6461, 8950],
+      "b": [7658, 8950],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:ブースの内法 800 と間仕切 90 の繰り返し（北の w_booth_n の南面 9795 から）。画素の中心との差は 11 mm 以内（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "ブース 1 とブース 2 の間。西は w_off_w の東面 6461、東は w_booth_e の西面 7658 まで。"
+    },
+    {
+      "id": "w_booth_2",
+      "kind": "partition",
+      "a": [6461, 8060],
+      "b": [7658, 8060],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:ブースの内法 800 と間仕切 90 の繰り返し（北の w_booth_n の南面 9795 から）。画素の中心との差は 11 mm 以内（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "ブース 2 とブース 3 の間。西は w_off_w の東面 6461、東は w_booth_e の西面 7658 まで。"
+    },
+    {
+      "id": "w_booth_3",
+      "kind": "partition",
+      "a": [6461, 7170],
+      "b": [7658, 7170],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:ブースの内法 800 と間仕切 90 の繰り返し（北の w_booth_n の南面 9795 から）。画素の中心との差は 11 mm 以内（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "ブース 3 とブース 4 の間。西は w_off_w の東面 6461、東は w_booth_e の西面 7658 まで。"
+    },
+    {
+      "id": "w_booth_4",
+      "kind": "partition",
+      "a": [6461, 6280],
+      "b": [7658, 6280],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:ブースの内法 800 と間仕切 90 の繰り返し（北の w_booth_n の南面 9795 から）。画素の中心との差は 11 mm 以内（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "ブース 4 とブース 5 の間。西は w_off_w の東面 6461、東は w_booth_e の西面 7658 まで。"
+    },
+    {
+      "id": "w_booth_5",
+      "kind": "partition",
+      "a": [6461, 5390],
+      "b": [7658, 5390],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "derived:ブースの内法 800 と間仕切 90 の繰り返し（北の w_booth_n の南面 9795 から）。画素の中心との差は 11 mm 以内（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "ブース 5 とブース 6 の間。西は w_off_w の東面 6461、東は w_booth_e の西面 7658 まで。"
+    },
+    {
+      "id": "w_gym_w",
+      "kind": "partition",
+      "a": [50, 3103],
+      "b": [50, 0],
+      "thickness": 100,
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:下端の細かい段の最初の 100（docs/drawing_readings.md「寸法線の起点は外壁の内面」）",
+      "note": "GYM の西の内壁。西の外壁 w_ext_w の内面（x=0）に沿って立つ。北は廊下の南の壁 w_corr_s の南面 3103 まで。"
+    },
+    {
+      "id": "w_gym_e",
+      "kind": "partition",
+      "a": [6797, 730],
+      "b": [6797, 3103],
+      "thickness": 60,
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:下端の中の段の 60、x 6,767〜6,827（docs/drawing_readings.md「下段の壁と扉」）",
+      "note": "GYM と会議室 A の間。南は柱型 col_s1 の北面 730、北は w_corr_s の南面 3103 まで。"
+    },
+    {
+      "id": "w_conf_ab",
+      "kind": "movable",
+      "a": [14070, 660],
+      "b": [14070, 3103],
+      "thickness": "@movable_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "assumed:可動間仕切りは閉じた状態で置く。会議室 A も B も廊下への扉を持つので、2 室として使っているとみる",
+      "note": "位置は下端の中の段の 60、x 14,040〜14,100（docs/drawing_readings.md「下段の壁と扉」、図面では破線と「仕切可能」）。南は柱型 col_s2 の北面 660、北は w_corr_s の南面 3103 まで。"
+    },
+    {
+      "id": "w_conf_bs",
+      "kind": "partition",
+      "a": [21193, 660],
+      "b": [21193, 3103],
+      "thickness": "@partition_t",
+      "height": "@ch",
+      "material": "wall_white",
+      "source": "drawing:下端の中の段の 90、x 21,148〜21,238（docs/drawing_readings.md「下段の壁と扉」）",
+      "note": "会議室 B と東の小室の間。南は柱型 col_s3 の北面 660、北は w_corr_s の南面 3103 まで。"
+    }
+  ],
+  "columns": [
+    {
+      "id": "col_n1",
+      "polygon": [[13622, 11292], [14439, 11292], [14439, 11972], [13622, 11972]],
+      "height": "@ch",
+      "source": "drawing:拡大図の柱型 x=981〜1031 px、y=99〜140 px と右 Y 連鎖の上端 680（docs/drawing_readings.md「右端の縦寸法は 680 から始まる」）",
+      "note": "幅 817 は拡大図の画素の実測。南面は右の 680 の目盛りと同じ高さにある。"
+    },
+    {
+      "id": "col_s1",
+      "polygon": [[6340, 0], [7254, 0], [7254, 730], [6340, 730]],
+      "height": "@ch",
+      "source": "drawing:拡大図 x 538〜588 px の柱型の上面の線 y=787〜788 px（奥行き 723〜739、中心 731）。最初の図面でも約 733",
+      "note": "幅 914 は画素からの概算で、中心を GYM と会議室 A の間の壁 w_gym_e の中心 6797 に合わせた。奥行きは画素の実測 730。南の柱の 660（右端の寸法の一番下）は東の柱 col_s3 のもので、col_s2 と col_s3 は画素でも 649〜666 に収まる。"
+    },
+    {
+      "id": "col_s2",
+      "polygon": [[13621, 0], [14519, 0], [14519, 660], [13621, 660]],
+      "height": "@ch",
+      "source": "drawing:拡大図の柱型 x=980.5〜1035.5 px、上面の線 y=791 px（docs/drawing_readings.md「南の壁の柱型」）",
+      "note": "奥行きは画素で拡大図 670、最初の図面 640。右端の寸法の 660 と合うので 660 とした。幅 898 は画素からの概算。中心は可動間仕切り w_conf_ab の中心 14070。"
+    },
+    {
+      "id": "col_s3",
+      "polygon": [[20893, 0], [22126, 0], [22126, 660], [20893, 660]],
+      "height": "@ch",
+      "source": "drawing:拡大図の柱型 x=1426.5〜1502 px、上面の線 y=791.5 px（docs/drawing_readings.md「南の壁の柱型」）",
+      "note": "奥行きは画素で拡大図 661、最初の図面 640。右端の寸法の 660 と合うので 660 とした。幅 1233 は画素からの概算。会議室 B と東の小室の間の壁 w_conf_bs（21148〜21238）がこの柱の北面に当たる。東の面は線が描かれておらず、南の壁の内面の線が始まる x=1502 px を東の面とみた。"
+    }
+  ],
+  "openings": [
+    {
+      "id": "d_off_w",
+      "kind": "door",
+      "wall": "w_corr_n_glass",
+      "offset": 179,
+      "width": "@door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:廊下から執務エリアへの西の扉（壁の切れ目 673〜702 px、中心 687.5 → X 11565）",
+      "note": "offset は開口の中心 11565 − 幅の半分 400。"
+    },
+    {
+      "id": "d_off_e",
+      "kind": "door",
+      "wall": "w_corr_n_glass",
+      "offset": 9045,
+      "width": "@door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:廊下から執務エリアへの東の扉（壁の切れ目 1008〜1037 px、中心 1022.5 → X 20431）",
+      "note": "offset は開口の中心 20431 − 幅の半分 400。東の端は 20831 で、東の壁の西面 20891 まで 60。"
+    },
+    {
+      "id": "d_conf_n",
+      "kind": "door",
+      "wall": "w_booth_n",
+      "offset": 2460,
+      "width": "@door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:執務エリアから会議室への扉（壁の切れ目 587〜615 px、中心 601 → X 9276）",
+      "note": "offset は開口の西端 8876 − w_booth_n の a の 6416。"
+    },
+    {
+      "id": "win_n_e",
+      "kind": "window",
+      "wall": "w_ext_n",
+      "offset": 1111,
+      "width": 5852,
+      "height": "@window_h",
+      "sill": "@window_sill",
+      "material": "glass_clear",
+      "source": "user:2026-09-30 北と東（曲面含む）に窓",
+      "note": "執務エリアの北の外壁のうち、柱型 col_n1 の東。X 14739〜20591 で、柱型の東面 14439 と東の壁の西面 20891 から 300 ずつ離した（離隔 300 は仮定）。offset は w_ext_n の a の 21702 − 20591。図面に窓の記号は無い。"
+    },
+    {
+      "id": "win_n_w",
+      "kind": "window",
+      "wall": "w_ext_n",
+      "offset": 8380,
+      "width": 6561,
+      "height": "@window_h",
+      "sill": "@window_sill",
+      "material": "glass_clear",
+      "source": "user:2026-09-30 北と東（曲面含む）に窓",
+      "note": "執務エリアの北の外壁のうち、柱型 col_n1 の西。X 6761〜13322 で、西の壁の東面 6461 と柱型の西面 13622 から 300 ずつ離した（離隔 300 は仮定）。offset は 21702 − 13322。北西の既存の部屋（X 6371 より西）は改修対象外なので窓を置かない。"
+    },
+    {
+      "id": "win_ne",
+      "kind": "window",
+      "wall": "w_ext_ne",
+      "offset": 300,
+      "width": 2065,
+      "height": "@window_h",
+      "sill": "@window_sill",
+      "material": "glass_clear",
+      "source": "user:2026-09-30 北と東（曲面含む）に窓",
+      "note": "北東の曲面の外壁。offset と width は中心線（半径 2763）の弧に沿った長さで、弧の全長 2666 の両端から 300 ずつ離した（離隔 300 は仮定）。"
+    },
+    {
+      "id": "win_e_lounge",
+      "kind": "window",
+      "wall": "w_ext_e",
+      "offset": 4845,
+      "width": 5713,
+      "height": "@window_h",
+      "sill": "@window_sill",
+      "material": "glass_clear",
+      "source": "user:2026-09-30 北と東（曲面含む）に窓",
+      "note": "東の外壁のラウンジの範囲。Y 4845〜10558 で、ラウンジの南端 4545 と曲面の始まり 10858 から 300 ずつ離した（離隔 300 は仮定）。offset は w_ext_e の a（y=0）からの距離で、Y と同じ値。"
+    },
+    {
+      "id": "win_e_small",
+      "kind": "window",
+      "wall": "w_ext_e",
+      "offset": 300,
+      "width": 2503,
+      "height": "@window_h",
+      "sill": "@window_sill",
+      "material": "glass_clear",
+      "source": "user:2026-09-30 北と東（曲面含む）に窓",
+      "note": "東の外壁の東の小室の範囲。Y 300〜2803 で、南の外壁の内面 0 と廊下の南の壁の南面 3103 から 300 ずつ離した（離隔 300 は仮定）。"
+    },
+    {
+      "id": "o_nw_existing",
+      "kind": "open",
+      "wall": "w_corr_n",
+      "offset": 3527,
+      "width": 1551,
+      "height": "@door_h",
+      "source": "drawing:docs/drawing_readings.md「北西の区画と出入口」の既存壁開口 x 3,527〜5,078",
+      "note": "開口の奥は改修対象外の既存の部屋 r_nw_existing（user:2026-09-30 の回答）。見学では入らない。高さは扉と同じと仮定。"
+    },
+    {
+      "id": "d_confa_s",
+      "kind": "door",
+      "wall": "w_corr_s",
+      "offset": 13145,
+      "width": 848,
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "user:2026-09-30 会議室 A の廊下側 848 は扉",
+      "note": "会議室 A の東の扉。x 13,145〜13,993（docs/drawing_readings.md「下段の壁と扉」）。開きの弧は描かれていない。"
+    },
+    {
+      "id": "d_gym",
+      "kind": "door",
+      "wall": "w_corr_s",
+      "offset": 5870,
+      "width": 850,
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:下端の細かい段 100+5325+445 の次の 850（docs/drawing_readings.md「下段の壁と扉」の GYM の扉 5,870〜6,720）",
+      "note": "廊下から GYM へ。offset は w_corr_s の a（x=0）からの距離で、x と同じ値。"
+    },
+    {
+      "id": "d_confa_w",
+      "kind": "door",
+      "wall": "w_corr_s",
+      "offset": 6872,
+      "width": 850,
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:下端の細かい段 60 の壁と 45 の次の 850（docs/drawing_readings.md「下段の壁と扉」の会議室 A 西の扉 6,872〜7,722）",
+      "note": "廊下から会議室 A へ（西の扉）。"
+    },
+    {
+      "id": "d_confb_w",
+      "kind": "door",
+      "wall": "w_corr_s",
+      "offset": 14145,
+      "width": 850,
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:下端の細かい段 60 の可動間仕切りと 45 の次の 850（docs/drawing_readings.md「下段の壁と扉」の会議室 B 西の扉 14,145〜14,995）",
+      "note": "廊下から会議室 B へ（西の扉）。"
+    },
+    {
+      "id": "d_confb_e",
+      "kind": "door",
+      "wall": "w_corr_s",
+      "offset": 20251,
+      "width": 850,
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:下端の細かい段 4656+300 の次の 850（docs/drawing_readings.md「下段の壁と扉」の会議室 B 東の扉 20,251〜21,101）",
+      "note": "廊下から会議室 B へ（東の扉）。"
+    },
+    {
+      "id": "d_small",
+      "kind": "door",
+      "wall": "w_corr_s_e",
+      "offset": 1810,
+      "width": 848,
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:下端の細かい段 1765 の次の 848（docs/drawing_readings.md「下段の壁と扉」の東の小室の扉 23,003〜23,851）",
+      "note": "廊下から東の小室へ。東の端 23851 から外壁の内面 23898 まで 47。"
+    },
+    {
+      "id": "d_entrance",
+      "kind": "door",
+      "wall": "w_ext_w",
+      "offset": 7893,
+      "width": 850,
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "user:2026-09-30 入口は廊下の西端、西の外壁の扉",
+      "note": "開きの弧は y 3,221〜4,087（docs/drawing_readings.md「北西の区画と出入口」）。幅は 850 とし、弧の中心 3654 に合わせて y 3229〜4079 に置いた。offset は w_ext_w の a の 11972 − 4079。"
+    },
+    {
+      "id": "d_conf_s",
+      "kind": "door",
+      "wall": "w_corr_n",
+      "offset": 8589,
+      "width": "@door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:廊下から会議室 r_conf_n への扉（枠 x=673.5〜721.5 px → X 8597〜9381、弧の半径 46〜48 px）",
+      "note": "枠の間 784 を他の扉と同じ @door_w（800）に丸め、中心 8989 に合わせて X 8589〜9389 に置いた。offset は w_corr_n の a（x=0）からの距離。"
+    },
+    {
+      "id": "d_booth_1",
+      "kind": "door",
+      "wall": "w_booth_e",
+      "offset": 175,
+      "width": "@booth_door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:ブース 1 の扉。吊り元は南の端で、会議室側へ開く（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "Y 8995〜9620。offset は w_booth_e の a（y=9795）から開口の北端 9620 まで。"
+    },
+    {
+      "id": "d_booth_2",
+      "kind": "door",
+      "wall": "w_booth_e",
+      "offset": 1065,
+      "width": "@booth_door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:ブース 2 の扉。吊り元は南の端で、会議室側へ開く（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "Y 8105〜8730。offset は w_booth_e の a（y=9795）から開口の北端 8730 まで。"
+    },
+    {
+      "id": "d_booth_3",
+      "kind": "door",
+      "wall": "w_booth_e",
+      "offset": 1955,
+      "width": "@booth_door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:ブース 3 の扉。吊り元は南の端で、会議室側へ開く（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "Y 7215〜7840。offset は w_booth_e の a（y=9795）から開口の北端 7840 まで。"
+    },
+    {
+      "id": "d_booth_4",
+      "kind": "door",
+      "wall": "w_booth_e",
+      "offset": 2845,
+      "width": "@booth_door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:ブース 4 の扉。吊り元は南の端で、会議室側へ開く（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "Y 6325〜6950。offset は w_booth_e の a（y=9795）から開口の北端 6950 まで。"
+    },
+    {
+      "id": "d_booth_5",
+      "kind": "door",
+      "wall": "w_booth_e",
+      "offset": 3735,
+      "width": "@booth_door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:ブース 5 の扉。吊り元は南の端で、会議室側へ開く（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "Y 5435〜6060。offset は w_booth_e の a（y=9795）から開口の北端 6060 まで。"
+    },
+    {
+      "id": "d_booth_6",
+      "kind": "door",
+      "wall": "w_booth_e",
+      "offset": 4625,
+      "width": "@booth_door_w",
+      "height": "@door_h",
+      "material": "door_wood_light",
+      "source": "drawing:ブース 6 の扉。吊り元は南の端で、会議室側へ開く（docs/drawing_readings.md「上段の会議室とブース」）",
+      "note": "Y 4545〜5170。offset は w_booth_e の a（y=9795）から開口の北端 5170 まで。"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "r_office",
+      "name": "執務エリア（デスク 3 島と北のカウンター席。会議室とブースは含まない）",
+      "polygon": [[6461, 9885], [9810, 9885], [9810, 9255], [11031, 9255], [11031, 4545], [20891, 4545], [20891, 11972], [14439, 11972], [14439, 11292], [13622, 11292], [13622, 11972], [6461, 11972]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_off_w・w_booth_n・w_conf_jog・w_conf_n・w_conf_e・w_corr_n・w_off_e・w_ext_n の面）と柱型 col_n1",
+      "note": "北の空き地（X 6461〜11031）は会議室の北にあり、カウンター席とコピー機が置かれている。仕切りが無いので同じ部屋に含めた。"
+    },
+    {
+      "id": "r_lounge",
+      "name": "東のラウンジ（曲面のカウンター、冷蔵庫、ベンチ 2 列、カフェ席 4 組）",
+      "polygon": [[20981, 4455], [23898, 4455], [23898, 10834], [23761, 11012], [23430, 11343], [23046, 11612], [22621, 11810], [22169, 11931], [21702, 11972], [20981, 11972]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_off_e と w_off_e_glass の東面 20981、w_ext_n の内面 11972、w_ext_ne の内面の半径 2688、w_ext_e の内面 23898）。南は廊下の北の壁 w_corr_n の南面 4455 の延長",
+      "note": "曲面は 10 度刻みの折れ線で近似した。南は廊下へ開いていて壁は無い。床の継ぎ目を作らないよう、南の辺を廊下の北の辺 4455 に合わせた（試作では仮の壁 w_lounge_s_tmp の北面 4545 で閉じていた）。"
+    },
+    {
+      "id": "r_nw_existing",
+      "name": "北西の既存の部屋（改修対象外、空の部屋）",
+      "polygon": [[0, 4545], [6371, 4545], [6371, 11972], [0, 11972]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "user:2026-09-30 北西の区画は改修対象外の既存の部屋",
+      "note": "壁で閉じた空の部屋。東は w_off_w の西面 6371、南は廊下の北の壁、西と北は外壁の内面（外形線）。"
+    },
+    {
+      "id": "r_corridor",
+      "name": "廊下",
+      "polygon": [[0, 3193], [23898, 3193], [23898, 4455], [0, 4455]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:左 Y 連鎖の廊下 1262。南は w_corr_s の北面 3148+45、北は w_corr_n の南面 4500−45、西と東は外壁の内面（外形線）",
+      "note": "入口の扉 d_entrance から東へ続く。東端の北側（x 20981 より東）は東のラウンジへ開いていて、壁は無い。"
+    },
+    {
+      "id": "r_gym",
+      "name": "GYM",
+      "polygon": [[100, 0], [6340, 0], [6340, 730], [6767, 730], [6767, 3103], [100, 3103]],
+      "ceiling": "@ch",
+      "floor_material": "floor_gym",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_gym_w の東面 100、w_gym_e の西面 6767、w_corr_s の南面 3103、南の外壁の内面 0）と柱型 col_s1",
+      "note": "東西 6667 は下端の細かい段 5325+445+850+47。"
+    },
+    {
+      "id": "r_conf_a",
+      "name": "会議室 A",
+      "polygon": [[7254, 0], [13621, 0], [13621, 660], [14040, 660], [14040, 3103], [6827, 3103], [6827, 730], [7254, 730]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_gym_e の東面 6827、w_conf_ab の西面 14040、w_corr_s の南面 3103、南の外壁の内面 0）と柱型 col_s1・col_s2",
+      "note": "東西 7213 は下端の中の段の値。可動間仕切り w_conf_ab を閉じて B と分けた状態。"
+    },
+    {
+      "id": "r_conf_b",
+      "name": "会議室 B",
+      "polygon": [[14519, 0], [20893, 0], [20893, 660], [21148, 660], [21148, 3103], [14100, 3103], [14100, 660], [14519, 660]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_conf_ab の東面 14100、w_conf_bs の西面 21148、w_corr_s の南面 3103、南の外壁の内面 0）と柱型 col_s2・col_s3",
+      "note": "東西 7048 は下端の中の段の値。"
+    },
+    {
+      "id": "r_small",
+      "name": "東の小室",
+      "polygon": [[22126, 0], [23898, 0], [23898, 3103], [21238, 3103], [21238, 660], [22126, 660]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_conf_bs の東面 21238、東の外壁の内面 23898、w_corr_s の南面 3103、南の外壁の内面 0）と柱型 col_s3",
+      "note": "東西 2660 は下端の中の段の値。用途は図面に書かれていない。"
+    },
+    {
+      "id": "r_conf_n",
+      "name": "上段の会議室（7 人掛けの机）",
+      "polygon": [[7748, 4545], [10941, 4545], [10941, 9165], [9720, 9165], [9720, 9795], [7748, 9795]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_booth_e の東面 7748、w_conf_e の西面 10941、w_corr_n の北面 4545、w_booth_n の南面 9795、w_conf_jog の西面 9720、w_conf_n の南面 9165）",
+      "note": "北東の角はコピー機の入る凹みの分だけ欠ける。扉は北の d_conf_n と南の d_conf_s。"
+    },
+    {
+      "id": "r_booth_1",
+      "name": "個室ブース 1（北から 1 室目）",
+      "polygon": [[6461, 8995], [7658, 8995], [7658, 9795], [6461, 9795]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_off_w の東面 6461、w_booth_e の西面 7658、南北は間仕切りの面）",
+      "note": "内法 1197 × 800。ブースは 1 室ずつ部屋にした（照明の規則が部屋ごとで、各ブースに 1 台置くため）。カウンターは段2。"
+    },
+    {
+      "id": "r_booth_2",
+      "name": "個室ブース 2（北から 2 室目）",
+      "polygon": [[6461, 8105], [7658, 8105], [7658, 8905], [6461, 8905]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_off_w の東面 6461、w_booth_e の西面 7658、南北は間仕切りの面）",
+      "note": "内法 1197 × 800。ブースは 1 室ずつ部屋にした（照明の規則が部屋ごとで、各ブースに 1 台置くため）。カウンターは段2。"
+    },
+    {
+      "id": "r_booth_3",
+      "name": "個室ブース 3（北から 3 室目）",
+      "polygon": [[6461, 7215], [7658, 7215], [7658, 8015], [6461, 8015]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_off_w の東面 6461、w_booth_e の西面 7658、南北は間仕切りの面）",
+      "note": "内法 1197 × 800。ブースは 1 室ずつ部屋にした（照明の規則が部屋ごとで、各ブースに 1 台置くため）。カウンターは段2。"
+    },
+    {
+      "id": "r_booth_4",
+      "name": "個室ブース 4（北から 4 室目）",
+      "polygon": [[6461, 6325], [7658, 6325], [7658, 7125], [6461, 7125]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_off_w の東面 6461、w_booth_e の西面 7658、南北は間仕切りの面）",
+      "note": "内法 1197 × 800。ブースは 1 室ずつ部屋にした（照明の規則が部屋ごとで、各ブースに 1 台置くため）。カウンターは段2。"
+    },
+    {
+      "id": "r_booth_5",
+      "name": "個室ブース 5（北から 5 室目）",
+      "polygon": [[6461, 5435], [7658, 5435], [7658, 6235], [6461, 6235]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_off_w の東面 6461、w_booth_e の西面 7658、南北は間仕切りの面）",
+      "note": "内法 1197 × 800。ブースは 1 室ずつ部屋にした（照明の規則が部屋ごとで、各ブースに 1 台置くため）。カウンターは段2。"
+    },
+    {
+      "id": "r_booth_6",
+      "name": "個室ブース 6（北から 6 室目）",
+      "polygon": [[6461, 4545], [7658, 4545], [7658, 5345], [6461, 5345]],
+      "ceiling": "@ch",
+      "floor_material": "floor_carpet_gray",
+      "ceiling_material": "ceiling_white",
+      "source": "derived:壁の内法（w_off_w の東面 6461、w_booth_e の西面 7658、南北は間仕切りの面）",
+      "note": "内法 1197 × 800。ブースは 1 室ずつ部屋にした（照明の規則が部屋ごとで、各ブースに 1 台置くため）。カウンターは段2。"
+    }
+  ],
+  "furniture": [
+    {
+      "id": "isl1_top",
+      "kind": "desk_w1400",
+      "room": "r_office",
+      "at": [12931, 10622],
+      "size": [1400, 700, "@desk_h"],
+      "rotation_deg": 180,
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200。Y は北の壁 11972 − 1000 − 350",
+      "note": "北端の W1400 D700。人は北に座る。"
+    },
+    {
+      "id": "isl1_dw",
+      "kind": "desk_w1200",
+      "room": "r_office",
+      "at": [12581, 6072],
+      "size": [1200, 700, "@desk_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200。W1200 を Y に向けた 4 台で、南端は 11972−1000−700−4×1200 = 5472",
+      "note": "西の列。人は西に座り東を向く。"
+    },
+    {
+      "id": "isl1_de",
+      "kind": "desk_w1200",
+      "room": "r_office",
+      "at": [13281, 6072],
+      "size": [1200, 700, "@desk_h"],
+      "rotation_deg": 90,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200 + 700",
+      "note": "東の列。西の列と背中合わせ。"
+    },
+    {
+      "id": "isl1_cw",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [11931, 6072],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:机の西端 − 300（画素の椅子の中心は机の縁から ≈ 280）",
+      "note": "東を向く。"
+    },
+    {
+      "id": "isl1_ce",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [13931, 6072],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 90,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:机の東端 + 300",
+      "note": "西を向く。"
+    },
+    {
+      "id": "isl1_ct",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [12931, 11272],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 180,
+      "source": "derived:W1400 の北端 10972 + 300",
+      "note": "南を向く。"
+    },
+    {
+      "id": "isl2_top",
+      "kind": "desk_w1400",
+      "room": "r_office",
+      "at": [15931, 10622],
+      "size": [1400, 700, "@desk_h"],
+      "rotation_deg": 180,
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200 + 1×(1400+1600)。Y は北の壁 11972 − 1000 − 350",
+      "note": "北端の W1400 D700。人は北に座る。"
+    },
+    {
+      "id": "isl2_dw",
+      "kind": "desk_w1200",
+      "room": "r_office",
+      "at": [15581, 6072],
+      "size": [1200, 700, "@desk_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200 + 1×(1400+1600)。W1200 を Y に向けた 4 台で、南端は 11972−1000−700−4×1200 = 5472",
+      "note": "西の列。人は西に座り東を向く。"
+    },
+    {
+      "id": "isl2_de",
+      "kind": "desk_w1200",
+      "room": "r_office",
+      "at": [16281, 6072],
+      "size": [1200, 700, "@desk_h"],
+      "rotation_deg": 90,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200 + 1×(1400+1600) + 700",
+      "note": "東の列。西の列と背中合わせ。"
+    },
+    {
+      "id": "isl2_cw",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [14931, 6072],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:机の西端 − 300（画素の椅子の中心は机の縁から ≈ 280）",
+      "note": "東を向く。"
+    },
+    {
+      "id": "isl2_ce",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [16931, 6072],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 90,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:机の東端 + 300",
+      "note": "西を向く。"
+    },
+    {
+      "id": "isl2_ct",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [15931, 11272],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 180,
+      "source": "derived:W1400 の北端 10972 + 300",
+      "note": "南を向く。"
+    },
+    {
+      "id": "isl3_top",
+      "kind": "desk_w1400",
+      "room": "r_office",
+      "at": [18931, 10622],
+      "size": [1400, 700, "@desk_h"],
+      "rotation_deg": 180,
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200 + 2×(1400+1600)。Y は北の壁 11972 − 1000 − 350",
+      "note": "北端の W1400 D700。人は北に座る。"
+    },
+    {
+      "id": "isl3_dw",
+      "kind": "desk_w1200",
+      "room": "r_office",
+      "at": [18581, 6072],
+      "size": [1200, 700, "@desk_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200 + 2×(1400+1600)。W1200 を Y に向けた 4 台で、南端は 11972−1000−700−4×1200 = 5472",
+      "note": "西の列。人は西に座り東を向く。"
+    },
+    {
+      "id": "isl3_de",
+      "kind": "desk_w1200",
+      "room": "r_office",
+      "at": [19281, 6072],
+      "size": [1200, 700, "@desk_h"],
+      "rotation_deg": 90,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:島の西端 = 会議室の東面 11031 + 1200 + 2×(1400+1600) + 700",
+      "note": "東の列。西の列と背中合わせ。"
+    },
+    {
+      "id": "isl3_cw",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [17931, 6072],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:机の西端 − 300（画素の椅子の中心は机の縁から ≈ 280）",
+      "note": "東を向く。"
+    },
+    {
+      "id": "isl3_ce",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [19931, 6072],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 90,
+      "array": {
+        "count": 4,
+        "pitch": 1200,
+        "axis": "y"
+      },
+      "source": "derived:机の東端 + 300",
+      "note": "西を向く。"
+    },
+    {
+      "id": "isl3_ct",
+      "kind": "chair_task",
+      "room": "r_office",
+      "at": [18931, 11272],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 180,
+      "source": "derived:W1400 の北端 10972 + 300",
+      "note": "南を向く。"
+    },
+    {
+      "id": "counter_n",
+      "kind": "counter_n",
+      "room": "r_office",
+      "at": [7900, 11747],
+      "size": [1500, 450, "@counter_h"],
+      "array": {
+        "count": 3,
+        "pitch": 1500,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の天板 x=584.5〜861 px（7144〜11659）、y=99〜126 px（11533〜11972）。継ぎ目は x=676.5、769.5 px",
+      "note": "北の壁沿いの 3 枚。1 枚は 92〜93 px（1502〜1519）で 1500 に、奥行きは 27 px（441）で 450 に丸め、北の壁の内面 11972 に付けた。人は南に座る。"
+    },
+    {
+      "id": "stool_w",
+      "kind": "chair_stool",
+      "room": "r_office",
+      "at": [7450, 11272],
+      "size": [460, 500, "@stool_h"],
+      "array": {
+        "count": 3,
+        "pitch": 1500,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の椅子 6 脚の中心 x=603、658、695、750、786.5、841.5 px（7446〜11340）、y=126〜157 px",
+      "note": "天板 1 枚に 2 脚で、天板の中心から ±450（画素 ±27.5 px = 449）。こちらは各天板の西の 1 脚。幅 28 px（457）、奥行き 31 px（506）。北を向く。"
+    },
+    {
+      "id": "stool_e",
+      "kind": "chair_stool",
+      "room": "r_office",
+      "at": [8350, 11272],
+      "size": [460, 500, "@stool_h"],
+      "array": {
+        "count": 3,
+        "pitch": 1500,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の椅子 6 脚の中心 x=603、658、695、750、786.5、841.5 px（7446〜11340）、y=126〜157 px",
+      "note": "天板 1 枚に 2 脚で、天板の中心から ±450（画素 ±27.5 px = 449）。こちらは各天板の東の 1 脚。幅 28 px（457）、奥行き 31 px（506）。北を向く。"
+    },
+    {
+      "id": "table_conf",
+      "kind": "table_conf",
+      "room": "r_conf_n",
+      "at": [9539, 7173],
+      "size": [1002, 2384, "@desk_h"],
+      "source": "drawing:拡大図の赤字 1290（ブースの東の壁から）・900（東の壁まで）・800（北の壁から）・1436（南の廊下の壁まで）と部屋の内法 3193 × 4620",
+      "note": "画素では x=700.5〜762.5 px、y=318〜466 px（1012 × 2417）。赤字どうしで閉じるよう、幅は 3193 − 1290 − 900 = 1003 を at が整数になる 1002 に、長さは 4620 − 800 − 1436 = 2384 とした。東の離隔は 901 になる。"
+    },
+    {
+      "id": "conf_cw",
+      "kind": "chair_task",
+      "room": "r_conf_n",
+      "at": [8738, 6373],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 3,
+        "pitch": 800,
+        "axis": "y"
+      },
+      "source": "drawing:拡大図の西の椅子 3 脚の中心 x=682.5 px（8744）、y=343.5、393.5、440.5 px（7981、7165、6397）",
+      "note": "机の西端 − 300。間隔は画素の平均 792 を 800 に、並びの中心を机の中心 7173 に合わせた。東を向く。"
+    },
+    {
+      "id": "conf_ce",
+      "kind": "chair_task",
+      "room": "r_conf_n",
+      "at": [10340, 6373],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 90,
+      "array": {
+        "count": 3,
+        "pitch": 800,
+        "axis": "y"
+      },
+      "source": "drawing:拡大図の東の椅子 3 脚の中心 x=780.5 px（10345）、y=345.5、392.5、442.5 px（7949、7182、6365）",
+      "note": "机の東端 + 300。西を向く。"
+    },
+    {
+      "id": "conf_cn",
+      "kind": "chair_task",
+      "room": "r_conf_n",
+      "at": [9539, 8665],
+      "size": ["@chair_w", "@chair_d", "@chair_h"],
+      "rotation_deg": 180,
+      "source": "drawing:拡大図の北の椅子 x=710〜753 px（9545）、y=285〜317 px（8675）",
+      "note": "机の北端 + 300。南を向く。"
+    },
+    {
+      "id": "desk_booth_1",
+      "kind": "desk_booth",
+      "room": "r_booth_1",
+      "at": [6661, 9395],
+      "size": [800, 400, "@desk_h"],
+      "rotation_deg": 90,
+      "source": "drawing:拡大図のブースの天板 x=543〜567.5 px（6461〜6866）、南北は各ブースの間仕切りの間いっぱい",
+      "note": "西の壁 w_off_w の東面 6461 に付けた奥行き 400（画素 24.8 px = 405）、幅はブースの内法 800。人は東に座り西を向く。"
+    },
+    {
+      "id": "desk_booth_2",
+      "kind": "desk_booth",
+      "room": "r_booth_2",
+      "at": [6661, 8505],
+      "size": [800, 400, "@desk_h"],
+      "rotation_deg": 90,
+      "source": "drawing:拡大図のブースの天板 x=543〜567.5 px（6461〜6866）、南北は各ブースの間仕切りの間いっぱい",
+      "note": "西の壁 w_off_w の東面 6461 に付けた奥行き 400（画素 24.8 px = 405）、幅はブースの内法 800。人は東に座り西を向く。"
+    },
+    {
+      "id": "desk_booth_3",
+      "kind": "desk_booth",
+      "room": "r_booth_3",
+      "at": [6661, 7615],
+      "size": [800, 400, "@desk_h"],
+      "rotation_deg": 90,
+      "source": "drawing:拡大図のブースの天板 x=543〜567.5 px（6461〜6866）、南北は各ブースの間仕切りの間いっぱい",
+      "note": "西の壁 w_off_w の東面 6461 に付けた奥行き 400（画素 24.8 px = 405）、幅はブースの内法 800。人は東に座り西を向く。"
+    },
+    {
+      "id": "desk_booth_4",
+      "kind": "desk_booth",
+      "room": "r_booth_4",
+      "at": [6661, 6725],
+      "size": [800, 400, "@desk_h"],
+      "rotation_deg": 90,
+      "source": "drawing:拡大図のブースの天板 x=543〜567.5 px（6461〜6866）、南北は各ブースの間仕切りの間いっぱい",
+      "note": "西の壁 w_off_w の東面 6461 に付けた奥行き 400（画素 24.8 px = 405）、幅はブースの内法 800。人は東に座り西を向く。"
+    },
+    {
+      "id": "desk_booth_5",
+      "kind": "desk_booth",
+      "room": "r_booth_5",
+      "at": [6661, 5835],
+      "size": [800, 400, "@desk_h"],
+      "rotation_deg": 90,
+      "source": "drawing:拡大図のブースの天板 x=543〜567.5 px（6461〜6866）、南北は各ブースの間仕切りの間いっぱい",
+      "note": "西の壁 w_off_w の東面 6461 に付けた奥行き 400（画素 24.8 px = 405）、幅はブースの内法 800。人は東に座り西を向く。"
+    },
+    {
+      "id": "desk_booth_6",
+      "kind": "desk_booth",
+      "room": "r_booth_6",
+      "at": [6661, 4945],
+      "size": [800, 400, "@desk_h"],
+      "rotation_deg": 90,
+      "source": "drawing:拡大図のブースの天板 x=543〜567.5 px（6461〜6866）、南北は各ブースの間仕切りの間いっぱい",
+      "note": "西の壁 w_off_w の東面 6461 に付けた奥行き 400（画素 24.8 px = 405）、幅はブースの内法 800。人は東に座り西を向く。"
+    },
+    {
+      "id": "copier",
+      "kind": "copier",
+      "room": "r_office",
+      "at": [10295, 9659],
+      "size": [650, 660, "@copier_h"],
+      "source": "drawing:拡大図の会議室の北東の角の箱 x=757.5〜797.5 px（9969〜10622）、y=220.5〜261 px（9328〜9990）",
+      "note": "箱の本体だけを採った。東に x=812 px まで張り出す差込口の線（約 230）は含めない。"
+    },
+    {
+      "id": "tm_a",
+      "kind": "table_meeting",
+      "room": "r_conf_a",
+      "at": [9526, 1503],
+      "size": [2400, 1200, "@desk_h"],
+      "array": {
+        "count": 2,
+        "pitch": 2400,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の会議室 A の机 x=656〜951.5 px（8311〜13137）、y=703.5〜776.5 px（会議室 B と同じ行）",
+      "note": "会議室 A には赤字が無い。机と椅子の並びの中心 x=804 px（10726）に 4800 の机を置き、南北は会議室 B と同じ 903〜2103。"
+    },
+    {
+      "id": "tm_b",
+      "kind": "table_meeting",
+      "room": "r_conf_b",
+      "at": [16548, 1503],
+      "size": [2400, 1200, "@desk_h"],
+      "array": {
+        "count": 2,
+        "pitch": 2400,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の会議室 B の机 x=1086.5〜1381.5 px（15341〜20158）、y=703.5〜776.5 px と赤字 1000（北の壁から）・1000（東の壁まで）",
+      "note": "天板 2 枚を 1 組で、2 枚で 295 px（4817）を 2400 × 2 に、奥行き 73 px（1192）を 1200 に丸めた。東端は 21148 − 1000 = 20148、北端は 3103 − 1000 = 2103。"
+    },
+    {
+      "id": "cm_a_n",
+      "kind": "chair_meeting",
+      "room": "r_conf_a",
+      "at": [8726, 2405],
+      "size": [650, 560, "@chair_h"],
+      "rotation_deg": 180,
+      "array": {
+        "count": 6,
+        "pitch": 800,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の椅子の列 y=668〜702 px（北）、777.5〜812.5 px（南）。間隔 49 px（800）",
+      "note": "6 脚の並びの中心を机の中心 10726 に合わせた。幅は肘を含めて 40 px（653）、奥行きは 34.5 px（563）。南を向く。"
+    },
+    {
+      "id": "cm_a_s",
+      "kind": "chair_meeting",
+      "room": "r_conf_a",
+      "at": [8726, 608],
+      "size": [650, 560, "@chair_h"],
+      "rotation_deg": 0,
+      "array": {
+        "count": 6,
+        "pitch": 800,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の椅子の列 y=668〜702 px（北）、777.5〜812.5 px（南）。間隔 49 px（800）",
+      "note": "6 脚の並びの中心を机の中心 10726 に合わせた。幅は肘を含めて 40 px（653）、奥行きは 34.5 px（563）。北を向く。"
+    },
+    {
+      "id": "cm_b_n",
+      "kind": "chair_meeting",
+      "room": "r_conf_b",
+      "at": [15748, 2405],
+      "size": [650, 560, "@chair_h"],
+      "rotation_deg": 180,
+      "array": {
+        "count": 6,
+        "pitch": 800,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の椅子の列 y=668〜702 px（北）、777.5〜812.5 px（南）。間隔 49 px（800）",
+      "note": "6 脚の並びの中心を机の中心 17748 に合わせた。幅は肘を含めて 40 px（653）、奥行きは 34.5 px（563）。南を向く。"
+    },
+    {
+      "id": "cm_b_s",
+      "kind": "chair_meeting",
+      "room": "r_conf_b",
+      "at": [15748, 608],
+      "size": [650, 560, "@chair_h"],
+      "rotation_deg": 0,
+      "array": {
+        "count": 6,
+        "pitch": 800,
+        "axis": "x"
+      },
+      "source": "drawing:拡大図の椅子の列 y=668〜702 px（北）、777.5〜812.5 px（南）。間隔 49 px（800）",
+      "note": "6 脚の並びの中心を机の中心 17748 に合わせた。幅は肘を含めて 40 px（653）、奥行きは 34.5 px（563）。北を向く。"
+    },
+    {
+      "id": "fridge",
+      "kind": "fridge",
+      "room": "r_lounge",
+      "at": [22045, 11470],
+      "size": [710, 790, "@fridge_h"],
+      "source": "drawing:拡大図の冷蔵庫の箱 x=1475〜1518.5 px（21685〜22395）、y=99〜147.5 px（11182〜11974）",
+      "note": "図面の箱は北東の角が曲面の壁の線で切られている。矩形 710 × 790 のまま壁と部屋の折れ線に収めるため、北端を 11972 から 11865 へ 107 南に下げた（docs/drawing_readings.md「段2 の家具」）。"
+    },
+    {
+      "id": "counter_curved",
+      "kind": "counter_curved",
+      "room": "r_lounge",
+      "at": [23113, 11184],
+      "size": [1394, 1228, "@counter_h"],
+      "arc": {
+        "center": [21702, 9284],
+        "r_in": 2088,
+        "r_out": 2675,
+        "a0": 38,
+        "a1": 70
+      },
+      "source": "drawing:拡大図の木目の帯の画素を中心 (21702, 9284) からの半径と角度に直した。内側の線は半径 2075〜2090、外側は壁の内面 2688 に接し、角度は 37.5〜74.5 度",
+      "note": "奥行きは 600。外側は壁の内面 2688 から 13 内に置いた（部屋 r_lounge の多角形は内面に内接する折れ線で、10 度の弦は 10 mm 内へ入る）。西端は冷蔵庫の東面に沿う縦の線だが、半径の向きの 70 度で切った（冷蔵庫と 16 離れ、外側の角に三角の隙間が残る）。東端は東のベンチに付く斜めの線で、38 度で切った。"
+    },
+    {
+      "id": "bench_w",
+      "kind": "bench",
+      "room": "r_lounge",
+      "at": [21281, 5188],
+      "size": [1466, 600, "@bench_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1466,
+        "axis": "y"
+      },
+      "source": "drawing:拡大図の西の緑の帯 x=1432〜1468.5 px（20983〜21579）、y=200.5〜559.5 px（4454〜10316）、区切り y=291、380、470 px",
+      "note": "4 区切りは 89〜90.5 px（1453〜1478）で、平均 1466。西はガラスの壁 w_off_e_glass の東面 20981 に付け、南は廊下との境 4455 から。東を向いて座る。"
+    },
+    {
+      "id": "bench_e",
+      "kind": "bench",
+      "room": "r_lounge",
+      "at": [23623, 5205],
+      "size": [1500, 550, "@bench_h"],
+      "rotation_deg": 90,
+      "array": {
+        "count": 4,
+        "pitch": 1500,
+        "axis": "y"
+      },
+      "source": "drawing:拡大図の東の緑の帯 x=1577〜1610.5 px（23350〜23898）、区切り y=192、284、376、467、559.5 px（各 91〜92.5 px）",
+      "note": "4 区切りを 1500 ずつ、4455〜10455 に置いた。北の区切りより先の斜めの小片（曲面のカウンターとのつなぎ）は入れていない。西を向いて座る。"
+    },
+    {
+      "id": "tc_s",
+      "kind": "table_cafe",
+      "room": "r_lounge",
+      "at": [22955, 4915],
+      "size": [600, 600, "@desk_h"],
+      "array": {
+        "count": 4,
+        "pitch": 1500,
+        "axis": "y"
+      },
+      "source": "drawing:拡大図の小さな天板 x=1534.5〜1571 px（22657〜23252）、組の南端 y=549.5、457.5、365.5、275 px（4617、6120、7622、9100）",
+      "note": "2 枚 1 組の南の 1 枚。1 枚 37 px（604）を 600 に、組の間隔 92 px（1502）を 1500 に丸め、組の南端を画素の平均 4615 に置いた。"
+    },
+    {
+      "id": "tc_n",
+      "kind": "table_cafe",
+      "room": "r_lounge",
+      "at": [22955, 5515],
+      "size": [600, 600, "@desk_h"],
+      "array": {
+        "count": 4,
+        "pitch": 1500,
+        "axis": "y"
+      },
+      "source": "drawing:拡大図の小さな天板 x=1534.5〜1571 px（22657〜23252）、組の南端 y=549.5、457.5、365.5、275 px（4617、6120、7622、9100）",
+      "note": "2 枚 1 組の北の 1 枚。1 枚 37 px（604）を 600 に、組の間隔 92 px（1502）を 1500 に丸め、組の南端を画素の平均 4615 に置いた。"
+    },
+    {
+      "id": "cc_s",
+      "kind": "chair_cafe",
+      "room": "r_lounge",
+      "at": [22410, 4915],
+      "size": [460, 490, "@cafe_chair_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1500,
+        "axis": "y"
+      },
+      "source": "drawing:拡大図の椅子 8 脚 x=1504.5〜1534.5 px（22165〜22655）、y の中心 219.5、256.5、311.5、348 px ほか（10006、9402、8503、7894）",
+      "note": "天板の西に 1 脚ずつで、天板の西端に付けた。幅 28 px（457）、奥行き 30 px（490）。東を向く。"
+    },
+    {
+      "id": "cc_n",
+      "kind": "chair_cafe",
+      "room": "r_lounge",
+      "at": [22410, 5515],
+      "size": [460, 490, "@cafe_chair_h"],
+      "rotation_deg": 270,
+      "array": {
+        "count": 4,
+        "pitch": 1500,
+        "axis": "y"
+      },
+      "source": "drawing:拡大図の椅子 8 脚 x=1504.5〜1534.5 px（22165〜22655）、y の中心 219.5、256.5、311.5、348 px ほか（10006、9402、8503、7894）",
+      "note": "天板の西に 1 脚ずつで、天板の西端に付けた。幅 28 px（457）、奥行き 30 px（490）。東を向く。"
+    }
+  ],
+  "lighting": [
+    {
+      "id": "l_office",
+      "kind": "baselight_1200x300",
+      "room": "r_office",
+      "pitch": "@light_pitch",
+      "size": [1200, 300],
+      "lumens": "@light_lm",
+      "source": "assumed",
+      "note": "天井は既存流用で、照明の配置は図面に無い。規則の展開は tools/check/planmodel.py の lighting_instances。"
+    },
+    {
+      "id": "l_corridor",
+      "kind": "downlight_150",
+      "room": "r_corridor",
+      "pitch": "@corridor_light_pitch",
+      "size": [150, 150],
+      "lumens": "@corridor_light_lm",
+      "source": "assumed",
+      "note": "廊下の照明は図面に無い（天井は既存流用）。照明が無いと入口からの視点が真っ暗になり、廊下に面した壁の裏も焼き込みで 0 になった（BAKE-6）。"
+    },
+    {
+      "id": "l_lounge",
+      "kind": "downlight_150",
+      "room": "r_lounge",
+      "pitch": "@corridor_light_pitch",
+      "size": [150, 150],
+      "lumens": "@corridor_light_lm",
+      "source": "assumed",
+      "note": "ラウンジの照明は図面に無い（天井は既存流用）。段1 で照明を足したとき漏れていて、窓の光だけでは暗かった（レーン B の撮影）。廊下と同じダウンライトの間隔と光束を仮に使う。"
+    },
+    {
+      "id": "l_nw_existing",
+      "kind": "baselight_1200x300",
+      "room": "r_nw_existing",
+      "pitch": "@light_pitch",
+      "size": [1200, 300],
+      "lumens": "@light_lm",
+      "source": "assumed",
+      "note": "北西の既存の部屋は改修対象外だが、既存の天井照明はあるとみる。照明が無いと既存壁開口の奥が真っ黒になり、焼き込みの検査（BAKE-4）も落ちる。"
+    },
+    {
+      "id": "l_gym",
+      "kind": "baselight_1200x300",
+      "room": "r_gym",
+      "pitch": "@light_pitch",
+      "size": [1200, 300],
+      "lumens": "@light_lm",
+      "source": "assumed",
+      "note": "GYMのベースライト。照明の配置は図面に無く（天井は既存流用）、執務エリアと同じ規則を置いた。"
+    },
+    {
+      "id": "l_conf_a",
+      "kind": "baselight_1200x300",
+      "room": "r_conf_a",
+      "pitch": "@light_pitch",
+      "size": [1200, 300],
+      "lumens": "@light_lm",
+      "source": "assumed",
+      "note": "会議室 Aのベースライト。照明の配置は図面に無く（天井は既存流用）、執務エリアと同じ規則を置いた。"
+    },
+    {
+      "id": "l_conf_b",
+      "kind": "baselight_1200x300",
+      "room": "r_conf_b",
+      "pitch": "@light_pitch",
+      "size": [1200, 300],
+      "lumens": "@light_lm",
+      "source": "assumed",
+      "note": "会議室 Bのベースライト。照明の配置は図面に無く（天井は既存流用）、執務エリアと同じ規則を置いた。"
+    },
+    {
+      "id": "l_small",
+      "kind": "baselight_1200x300",
+      "room": "r_small",
+      "pitch": 3200,
+      "size": [1200, 300],
+      "lumens": "@light_lm",
+      "source": "assumed",
+      "note": "東の小室は 1 台。間隔を部屋の辺（2660 × 3103）より長い 3200 にして、外接矩形の中央に 1 台だけ置く。"
+    },
+    {
+      "id": "l_conf_n",
+      "kind": "baselight_1200x300",
+      "room": "r_conf_n",
+      "pitch": "@light_pitch",
+      "size": [1200, 300],
+      "lumens": "@light_lm",
+      "source": "assumed",
+      "note": "上段の会議室のベースライト。照明の配置は図面に無く（天井は既存流用）、執務エリアと同じ規則を置いた。"
+    },
+    {
+      "id": "l_booth_1",
+      "kind": "downlight_150",
+      "room": "r_booth_1",
+      "pitch": 3200,
+      "size": [150, 150],
+      "lumens": "@corridor_light_lm",
+      "source": "assumed",
+      "note": "ブース 1 に 1 台。間隔を部屋の辺より長い 3200 にして中央に 1 台だけ置く。光束は廊下のダウンライトを仮に使う。"
+    },
+    {
+      "id": "l_booth_2",
+      "kind": "downlight_150",
+      "room": "r_booth_2",
+      "pitch": 3200,
+      "size": [150, 150],
+      "lumens": "@corridor_light_lm",
+      "source": "assumed",
+      "note": "ブース 2 に 1 台。間隔を部屋の辺より長い 3200 にして中央に 1 台だけ置く。光束は廊下のダウンライトを仮に使う。"
+    },
+    {
+      "id": "l_booth_3",
+      "kind": "downlight_150",
+      "room": "r_booth_3",
+      "pitch": 3200,
+      "size": [150, 150],
+      "lumens": "@corridor_light_lm",
+      "source": "assumed",
+      "note": "ブース 3 に 1 台。間隔を部屋の辺より長い 3200 にして中央に 1 台だけ置く。光束は廊下のダウンライトを仮に使う。"
+    },
+    {
+      "id": "l_booth_4",
+      "kind": "downlight_150",
+      "room": "r_booth_4",
+      "pitch": 3200,
+      "size": [150, 150],
+      "lumens": "@corridor_light_lm",
+      "source": "assumed",
+      "note": "ブース 4 に 1 台。間隔を部屋の辺より長い 3200 にして中央に 1 台だけ置く。光束は廊下のダウンライトを仮に使う。"
+    },
+    {
+      "id": "l_booth_5",
+      "kind": "downlight_150",
+      "room": "r_booth_5",
+      "pitch": 3200,
+      "size": [150, 150],
+      "lumens": "@corridor_light_lm",
+      "source": "assumed",
+      "note": "ブース 5 に 1 台。間隔を部屋の辺より長い 3200 にして中央に 1 台だけ置く。光束は廊下のダウンライトを仮に使う。"
+    },
+    {
+      "id": "l_booth_6",
+      "kind": "downlight_150",
+      "room": "r_booth_6",
+      "pitch": 3200,
+      "size": [150, 150],
+      "lumens": "@corridor_light_lm",
+      "source": "assumed",
+      "note": "ブース 6 に 1 台。間隔を部屋の辺より長い 3200 にして中央に 1 台だけ置く。光束は廊下のダウンライトを仮に使う。"
+    }
+  ],
+  "materials": [
+    {
+      "id": "floor_carpet_gray",
+      "preset": "floor_carpet_gray",
+      "source": "user:2026-09-30 仕上げは明るい標準オフィス",
+      "note": "グレーのタイルカーペット。色と粗さは data/presets/materials.json。"
+    },
+    {
+      "id": "wall_white",
+      "preset": "wall_white",
+      "source": "user:2026-09-30 仕上げは明るい標準オフィス",
+      "note": "白の塗装。色と粗さは data/presets/materials.json。"
+    },
+    {
+      "id": "ceiling_white",
+      "preset": "ceiling_white",
+      "source": "user:2026-09-30 仕上げは明るい標準オフィス",
+      "note": "白の岩綿吸音板。色と粗さは data/presets/materials.json。"
+    },
+    {
+      "id": "door_wood_light",
+      "preset": "door_wood_light",
+      "source": "user:2026-09-30 仕上げは明るい標準オフィス",
+      "note": "明るい木目。色と粗さは data/presets/materials.json。"
+    },
+    {
+      "id": "glass_clear",
+      "preset": "glass_clear",
+      "source": "user:2026-09-30 仕上げは明るい標準オフィス",
+      "note": "透明のガラス。色と粗さは data/presets/materials.json。"
+    },
+    {
+      "id": "floor_gym",
+      "preset": "floor_gym",
+      "source": "user:2026-09-30 仕上げは明るい標準オフィス",
+      "note": "GYM の床、濃いグレーのゴム。色と粗さは data/presets/materials.json。"
+    }
+  ],
+  "chains": [
+    {
+      "id": "c_left_y",
+      "axis": "y",
+      "segments": [
+        {"mm": 2180},
+        {"mm": "@partition_t"},
+        {"mm": 5157},
+        {"mm": "@partition_t"},
+        {"mm": 1262, "note": "廊下"},
+        {"mm": "@partition_t"},
+        {"mm": 3103, "note": "GYM SPACE"}
+      ],
+      "total": 11972,
+      "source": "drawing:左端の縦寸法",
+      "note": "segments は図面の上（北）から下（南）の順。"
+    },
+    {
+      "id": "c_top_x",
+      "axis": "x",
+      "segments": [
+        {"mm": 1810},
+        {"mm": "@partition_t"},
+        {"mm": 12530},
+        {"mm": "@partition_t"}
+      ],
+      "total": 14520,
+      "source": "drawing:上端の横寸法（6461 の右の 14520 の内訳）",
+      "note": "segments は図面の左（西）から右（東）の順。"
+    },
+    {
+      "id": "c_right_y",
+      "axis": "y",
+      "segments": [
+        {"mm": 680},
+        {"mm": 6837},
+        {"mm": 1262, "note": "廊下"},
+        {"mm": "@partition_t"},
+        {"mm": 2461},
+        {"mm": 660}
+      ],
+      "total": 11990,
+      "source": "drawing:右端の縦寸法",
+      "note": "segments は図面の上（北）から下（南）の順。一番上は 680（段0 で 660 と読み違えていた。目盛り 377.0→402.5 px は 25.5 px ≈ 675 mm）。和は 11990 で全体寸法と閉じる。上の 680+6837 = 7517 は左 Y 連鎖の 2180+90+5157+90 と一致する。"
+    },
+    {
+      "id": "c_office_x",
+      "axis": "x",
+      "start": 10941,
+      "segments": [
+        {"mm": "@partition_t", "ref": "w_conf_e", "note": "会議室の東の壁"},
+        {"mm": 1200},
+        {"mm": 1400, "ref": "isl1_top", "note": "島 1"},
+        {"mm": 1600},
+        {"mm": 1400, "ref": "isl2_top", "note": "島 2"},
+        {"mm": 1600},
+        {"mm": 1400, "ref": "isl3_top", "note": "島 3"},
+        {"mm": 1260},
+        {"mm": "@partition_t", "ref": "w_off_e", "note": "カウンター側の間仕切"}
+      ],
+      "total": 10040,
+      "source": "drawing:執務エリア下端の赤字 1200・1600・1600・1260 と島の幅 1400（W1400 D700）",
+      "note": "total は 20981（上段 X 連鎖 6461+1810+90+12530+90）− 10941。会議室の東の壁には位置の寸法が無く、この連鎖から逆算した。閉合そのものは作りで成り立つので、歯は ref の累積座標のほう（島と壁が赤字どおりの位置にあるか）。画素の実測との差は 3 mm。"
+    },
+    {
+      "id": "c_office_y",
+      "axis": "y",
+      "start": 11972,
+      "segments": [
+        {"mm": 1000, "note": "北の壁から島の北端"},
+        {"mm": 700, "ref": "isl2_top", "note": "W1400 D700"},
+        {"mm": 4800, "ref": "isl2_dw", "note": "W1200 を Y に向けた 4 台"},
+        {"mm": 927, "note": "島の南端から廊下の北の壁"},
+        {"mm": "@partition_t", "ref": "w_corr_n", "note": "廊下の北の壁"}
+      ],
+      "total": 7517,
+      "source": "drawing:島 2 の北の赤字 1000 と南の赤字 927、机の寸法 W1400 D700 と W1200 D700",
+      "note": "total は左 Y 連鎖の 2180+90+5157+90。赤字と机の寸法だけで、左端の寸法と独立に閉じる。"
+    },
+    {
+      "id": "c_bottom_x_detail",
+      "axis": "x",
+      "start": 0,
+      "segments": [
+        {"mm": 100, "ref": "w_gym_w", "note": "GYM の西の内壁"},
+        {"mm": 5325},
+        {"mm": 445},
+        {"mm": 850, "ref": "d_gym", "note": "GYM の扉"},
+        {"mm": 47},
+        {"mm": 60, "ref": "w_gym_e", "note": "GYM と会議室 A の間の壁 60"},
+        {"mm": 45, "note": "60 の壁の直後に上へ小さく書かれた 45"},
+        {"mm": 850, "ref": "d_confa_w", "note": "会議室 A 西の扉"},
+        {"mm": 300},
+        {"mm": 4823},
+        {"mm": 300},
+        {"mm": 848, "ref": "d_confa_s", "note": "会議室 A 東の扉"},
+        {"mm": 47},
+        {"mm": "@movable_t", "ref": "w_conf_ab", "note": "可動間仕切 60"},
+        {"mm": 45, "note": "60 の壁の直後に上へ小さく書かれた 45"},
+        {"mm": 850, "ref": "d_confb_w", "note": "会議室 B 西の扉"},
+        {"mm": 300},
+        {"mm": 4656},
+        {"mm": 300},
+        {"mm": 850, "ref": "d_confb_e", "note": "会議室 B 東の扉"},
+        {"mm": 47},
+        {"mm": "@partition_t", "ref": "w_conf_bs", "note": "間仕切 90"},
+        {"mm": 1765},
+        {"mm": 848, "ref": "d_small", "note": "東の小室の扉"},
+        {"mm": 47}
+      ],
+      "total": 23898,
+      "source": "drawing:下端の横寸法の細かい段",
+      "note": "segments は西から東の順。和は 23898 で下端の全体寸法と閉じる。画素の目盛りとの差は最大 8 mm（13145 に対し 13153）。start は外形の西辺 0 で、ref を持つ segment ごとに下段の壁と扉が累積座標の位置にあるかを PLAN-3 が見る。"
+    },
+    {
+      "id": "c_bottom_x",
+      "axis": "x",
+      "segments": [
+        {"mm": 6768},
+        {"mm": 60},
+        {"mm": 7213},
+        {"mm": "@movable_t"},
+        {"mm": 7048},
+        {"mm": "@partition_t"},
+        {"mm": 2660}
+      ],
+      "total": 23898,
+      "source": "drawing:下端の横寸法の中の段",
+      "note": "segments は西から東の順。和は 23899 で +1。ラベル 6768 は細かい段の 100+5325+445+850+47 = 6767 と 1 mm 食い違う（画素では目盛りが x=506.0 / 508.5 px で区別できない）。細かい段が 23898 で閉じるので細かい段を正とする。+1 は policy の chain_tolerance_mm（2）の内側なので waiver を置かない。"
+    }
+  ],
+  "clearances": [
+    {
+      "id": "cl_conf_w",
+      "from": "table_conf",
+      "to": "w_booth_e",
+      "mm": 1290,
+      "source": "drawing:上段の会議室の赤字 1290（ブースの東の壁の東面から机の西端）"
+    },
+    {
+      "id": "cl_conf_e",
+      "from": "table_conf",
+      "to": "w_conf_e",
+      "mm": 900,
+      "source": "drawing:上段の会議室の赤字 900（机の東端から東の壁の西面）"
+    },
+    {
+      "id": "cl_conf_n",
+      "from": "table_conf",
+      "to": "w_conf_n",
+      "mm": 800,
+      "source": "drawing:上段の会議室の赤字 800（北の壁の南面から机の北端）"
+    },
+    {
+      "id": "cl_conf_s",
+      "from": "table_conf",
+      "to": "w_corr_n",
+      "mm": 1436,
+      "source": "drawing:上段の会議室の赤字 1436（机の南端から廊下の北の壁の北面）"
+    },
+    {
+      "id": "cl_mtg_b_n",
+      "from": "tm_b",
+      "to": "w_corr_s",
+      "mm": 1000,
+      "source": "drawing:会議室 B の赤字 1000（廊下の南の壁の南面から机の北端）"
+    },
+    {
+      "id": "cl_mtg_b_e",
+      "from": "tm_b",
+      "to": "w_conf_bs",
+      "mm": 1000,
+      "source": "drawing:会議室 B の赤字 1000（机の東端から東の壁の西面）"
+    },
+    {
+      "id": "cl_mtg_b_s",
+      "from": "tm_b",
+      "to": "w_ext_s",
+      "mm": 921,
+      "source": "drawing:会議室 B の赤字 921（机の南端から南の外壁の内面）"
+    }
+  ],
+  "waivers": [
+    {
+      "id": "wv_outline_east",
+      "check": "PLAN-3",
+      "target": "outline",
+      "residual_mm": 18,
+      "reason": "右端の全体寸法 11990 は、矩形に置いた外形の東辺 11972 より 18 長い。下の目盛りが左 829.5 px・右 830.0 px で、下段の内訳も左 3103 と右 3121 で 18 違うので、読み違いではなく外形の南辺が東で下がっているとみる。角を動かすかはユーザーに確かめる。",
+      "reread": {
+        "date": "2026-09-30",
+        "method": "平面図 PNG を拡大して数字を読み直し、目盛りの画素間隔を 26.46 mm/px で mm に換算して突き合わせた"
+      }
+    },
+    {
+      "id": "wv_booth_door_1",
+      "check": "PLAN-7",
+      "target": "d_booth_1",
+      "residual_mm": 125,
+      "reason": "個室ブースの扉は図面の開きの弧で 625 しかなく、policy の扉の下限 750 は通路や部屋の扉を想定した値。1 人用のブースの扉として図面どおりに置く。"
+    },
+    {
+      "id": "wv_booth_door_2",
+      "check": "PLAN-7",
+      "target": "d_booth_2",
+      "residual_mm": 125,
+      "reason": "個室ブースの扉は図面の開きの弧で 625 しかなく、policy の扉の下限 750 は通路や部屋の扉を想定した値。1 人用のブースの扉として図面どおりに置く。"
+    },
+    {
+      "id": "wv_booth_door_3",
+      "check": "PLAN-7",
+      "target": "d_booth_3",
+      "residual_mm": 125,
+      "reason": "個室ブースの扉は図面の開きの弧で 625 しかなく、policy の扉の下限 750 は通路や部屋の扉を想定した値。1 人用のブースの扉として図面どおりに置く。"
+    },
+    {
+      "id": "wv_booth_door_4",
+      "check": "PLAN-7",
+      "target": "d_booth_4",
+      "residual_mm": 125,
+      "reason": "個室ブースの扉は図面の開きの弧で 625 しかなく、policy の扉の下限 750 は通路や部屋の扉を想定した値。1 人用のブースの扉として図面どおりに置く。"
+    },
+    {
+      "id": "wv_booth_door_5",
+      "check": "PLAN-7",
+      "target": "d_booth_5",
+      "residual_mm": 125,
+      "reason": "個室ブースの扉は図面の開きの弧で 625 しかなく、policy の扉の下限 750 は通路や部屋の扉を想定した値。1 人用のブースの扉として図面どおりに置く。"
+    },
+    {
+      "id": "wv_booth_door_6",
+      "check": "PLAN-7",
+      "target": "d_booth_6",
+      "residual_mm": 125,
+      "reason": "個室ブースの扉は図面の開きの弧で 625 しかなく、policy の扉の下限 750 は通路や部屋の扉を想定した値。1 人用のブースの扉として図面どおりに置く。"
+    },
+    {
+      "id": "wv_cl_mtg_b_s",
+      "check": "PLAN-12",
+      "target": "cl_mtg_b_s",
+      "residual_mm": -18,
+      "reason": "会議室 B の南北の赤字 1000 + 机 1200 + 921 = 3121 は、右端の 2461 + 660 = 3121 と同じで、外形の南辺が東で 18 下がった実際の内法に対する寸法。plan は外形を左端の 11972 で矩形に置き、南の外壁を y=0 で水平にしているので、机の南端 903 からの空きは 903 になる。wv_outline_east と同じ 18 mm。"
+    }
+  ]
+}

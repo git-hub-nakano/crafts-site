@@ -1,0 +1,1124 @@
+{
+  "plan_digest": "sha256:ee7cd1ad07d7008dc071a078d6dd1ee470b799eedebe4a49abde2c5a964420fd",
+  "lights": [
+    {
+      "id": "l_booth_1_0",
+      "type": "area",
+      "pos": [
+        7059.0,
+        9395.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_booth_1"
+    },
+    {
+      "id": "l_booth_2_0",
+      "type": "area",
+      "pos": [
+        7059.0,
+        8505.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_booth_2"
+    },
+    {
+      "id": "l_booth_3_0",
+      "type": "area",
+      "pos": [
+        7059.0,
+        7615.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_booth_3"
+    },
+    {
+      "id": "l_booth_4_0",
+      "type": "area",
+      "pos": [
+        7059.0,
+        6725.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_booth_4"
+    },
+    {
+      "id": "l_booth_5_0",
+      "type": "area",
+      "pos": [
+        7059.0,
+        5835.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_booth_5"
+    },
+    {
+      "id": "l_booth_6_0",
+      "type": "area",
+      "pos": [
+        7059.0,
+        4945.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_booth_6"
+    },
+    {
+      "id": "l_conf_a_0",
+      "type": "area",
+      "pos": [
+        8033.0,
+        1551.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_conf_a"
+    },
+    {
+      "id": "l_conf_a_1",
+      "type": "area",
+      "pos": [
+        10433.0,
+        1551.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_conf_a"
+    },
+    {
+      "id": "l_conf_a_2",
+      "type": "area",
+      "pos": [
+        12833.0,
+        1551.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_conf_a"
+    },
+    {
+      "id": "l_conf_b_0",
+      "type": "area",
+      "pos": [
+        16424.0,
+        1551.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_conf_b"
+    },
+    {
+      "id": "l_conf_b_1",
+      "type": "area",
+      "pos": [
+        18824.0,
+        1551.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_conf_b"
+    },
+    {
+      "id": "l_conf_n_0",
+      "type": "area",
+      "pos": [
+        9344.0,
+        5970.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_conf_n"
+    },
+    {
+      "id": "l_conf_n_1",
+      "type": "area",
+      "pos": [
+        9344.0,
+        8370.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_conf_n"
+    },
+    {
+      "id": "l_corridor_0",
+      "type": "area",
+      "pos": [
+        1149.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_10",
+      "type": "area",
+      "pos": [
+        19149.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_11",
+      "type": "area",
+      "pos": [
+        20949.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_12",
+      "type": "area",
+      "pos": [
+        22749.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_1",
+      "type": "area",
+      "pos": [
+        2949.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_2",
+      "type": "area",
+      "pos": [
+        4749.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_3",
+      "type": "area",
+      "pos": [
+        6549.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_4",
+      "type": "area",
+      "pos": [
+        8349.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_5",
+      "type": "area",
+      "pos": [
+        10149.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_6",
+      "type": "area",
+      "pos": [
+        11949.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_7",
+      "type": "area",
+      "pos": [
+        13749.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_8",
+      "type": "area",
+      "pos": [
+        15549.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_corridor_9",
+      "type": "area",
+      "pos": [
+        17349.0,
+        3824.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_corridor"
+    },
+    {
+      "id": "l_gym_0",
+      "type": "area",
+      "pos": [
+        2233.0,
+        1551.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_gym"
+    },
+    {
+      "id": "l_gym_1",
+      "type": "area",
+      "pos": [
+        4633.0,
+        1551.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_gym"
+    },
+    {
+      "id": "l_lounge_0",
+      "type": "area",
+      "pos": [
+        22439.0,
+        5513.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_lounge"
+    },
+    {
+      "id": "l_lounge_1",
+      "type": "area",
+      "pos": [
+        22439.0,
+        7313.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_lounge"
+    },
+    {
+      "id": "l_lounge_2",
+      "type": "area",
+      "pos": [
+        22439.0,
+        9113.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_lounge"
+    },
+    {
+      "id": "l_lounge_3",
+      "type": "area",
+      "pos": [
+        22439.0,
+        10913.0,
+        2395.0
+      ],
+      "size": [
+        150.0,
+        150.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 1.1713,
+      "lumens": 800.0,
+      "room": "r_lounge"
+    },
+    {
+      "id": "l_nw_existing_0",
+      "type": "area",
+      "pos": [
+        1985.0,
+        5858.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_nw_existing"
+    },
+    {
+      "id": "l_nw_existing_1",
+      "type": "area",
+      "pos": [
+        4385.0,
+        5858.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_nw_existing"
+    },
+    {
+      "id": "l_nw_existing_2",
+      "type": "area",
+      "pos": [
+        1985.0,
+        8258.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_nw_existing"
+    },
+    {
+      "id": "l_nw_existing_3",
+      "type": "area",
+      "pos": [
+        4385.0,
+        8258.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_nw_existing"
+    },
+    {
+      "id": "l_nw_existing_4",
+      "type": "area",
+      "pos": [
+        1985.0,
+        10658.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_nw_existing"
+    },
+    {
+      "id": "l_nw_existing_5",
+      "type": "area",
+      "pos": [
+        4385.0,
+        10658.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_nw_existing"
+    },
+    {
+      "id": "l_office_0",
+      "type": "area",
+      "pos": [
+        12476.0,
+        5858.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_10",
+      "type": "area",
+      "pos": [
+        12476.0,
+        10658.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_11",
+      "type": "area",
+      "pos": [
+        14876.0,
+        10658.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_12",
+      "type": "area",
+      "pos": [
+        17276.0,
+        10658.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_13",
+      "type": "area",
+      "pos": [
+        19676.0,
+        10658.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_1",
+      "type": "area",
+      "pos": [
+        14876.0,
+        5858.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_2",
+      "type": "area",
+      "pos": [
+        17276.0,
+        5858.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_3",
+      "type": "area",
+      "pos": [
+        19676.0,
+        5858.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_4",
+      "type": "area",
+      "pos": [
+        12476.0,
+        8258.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_5",
+      "type": "area",
+      "pos": [
+        14876.0,
+        8258.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_6",
+      "type": "area",
+      "pos": [
+        17276.0,
+        8258.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_7",
+      "type": "area",
+      "pos": [
+        19676.0,
+        8258.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_8",
+      "type": "area",
+      "pos": [
+        7676.0,
+        10658.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_office_9",
+      "type": "area",
+      "pos": [
+        10076.0,
+        10658.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_office"
+    },
+    {
+      "id": "l_small_0",
+      "type": "area",
+      "pos": [
+        22568.0,
+        1551.0,
+        2395.0
+      ],
+      "size": [
+        1200.0,
+        300.0
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "watts": 5.8565,
+      "lumens": 4000.0,
+      "room": "r_small"
+    }
+  ],
+  "sun": null,
+  "world": {
+    "strength": 1.0,
+    "hdri": "env/sky.hdr",
+    "rotation_deg": 0
+  }
+}

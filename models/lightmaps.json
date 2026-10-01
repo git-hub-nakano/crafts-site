@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "intensity": 1.0,
+  "colorSpace": "srgb-linear",
+  "channel": 1,
+  "plan_digest": "sha256:ee7cd1ad07d7008dc071a078d6dd1ee470b799eedebe4a49abde2c5a964420fd",
+  "atlases": {
+    "booth_1": {
+      "exr": "lightmaps/lm_booth_1.exr",
+      "size": 512,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__booth_1__m_desk_top",
+        "r_booth_1__ceiling",
+        "r_booth_1__floor",
+        "w_booth_1"
+      ]
+    },
+    "booth_2": {
+      "exr": "lightmaps/lm_booth_2.exr",
+      "size": 512,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__booth_2__m_desk_top",
+        "r_booth_2__ceiling",
+        "r_booth_2__floor",
+        "w_booth_2"
+      ]
+    },
+    "booth_3": {
+      "exr": "lightmaps/lm_booth_3.exr",
+      "size": 512,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__booth_3__m_desk_top",
+        "r_booth_3__ceiling",
+        "r_booth_3__floor",
+        "w_booth_3"
+      ]
+    },
+    "booth_4": {
+      "exr": "lightmaps/lm_booth_4.exr",
+      "size": 512,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__booth_4__m_desk_top",
+        "r_booth_4__ceiling",
+        "r_booth_4__floor",
+        "w_booth_4"
+      ]
+    },
+    "booth_5": {
+      "exr": "lightmaps/lm_booth_5.exr",
+      "size": 512,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__booth_5__m_desk_top",
+        "r_booth_5__ceiling",
+        "r_booth_5__floor",
+        "w_booth_5"
+      ]
+    },
+    "booth_6": {
+      "exr": "lightmaps/lm_booth_6.exr",
+      "size": 256,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__booth_6__m_desk_top",
+        "r_booth_6__ceiling",
+        "r_booth_6__floor"
+      ]
+    },
+    "conf_a": {
+      "exr": "lightmaps/lm_conf_a.exr",
+      "size": 2048,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__conf_a__m_chair",
+        "batch__furniture__conf_a__m_desk_top",
+        "batch__furniture__conf_a__m_metal",
+        "col_s2",
+        "r_conf_a__ceiling",
+        "r_conf_a__floor",
+        "w_conf_ab"
+      ]
+    },
+    "conf_b": {
+      "exr": "lightmaps/lm_conf_b.exr",
+      "size": 2048,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__conf_b__m_chair",
+        "batch__furniture__conf_b__m_desk_top",
+        "batch__furniture__conf_b__m_metal",
+        "r_conf_b__ceiling",
+        "r_conf_b__floor",
+        "w_conf_bs",
+        "w_ext_s"
+      ]
+    },
+    "conf_n": {
+      "exr": "lightmaps/lm_conf_n.exr",
+      "size": 2048,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__conf_n__m_chair",
+        "batch__furniture__conf_n__m_desk_top",
+        "batch__furniture__conf_n__m_metal",
+        "r_conf_n__ceiling",
+        "r_conf_n__floor",
+        "w_booth_e"
+      ]
+    },
+    "lounge": {
+      "exr": "lightmaps/lm_lounge.exr",
+      "size": 2048,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__lounge__m_appliance",
+        "batch__furniture__lounge__m_bench",
+        "batch__furniture__lounge__m_chair",
+        "batch__furniture__lounge__m_desk_top",
+        "batch__furniture__lounge__m_furniture",
+        "batch__furniture__lounge__m_metal",
+        "r_lounge__ceiling",
+        "r_lounge__floor",
+        "w_ext_e",
+        "w_ext_ne"
+      ]
+    },
+    "office": {
+      "exr": "lightmaps/lm_office.exr",
+      "size": 4096,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "batch__furniture__office__m_appliance",
+        "batch__furniture__office__m_chair",
+        "batch__furniture__office__m_desk_top",
+        "batch__furniture__office__m_metal",
+        "col_n1",
+        "r_office__ceiling",
+        "r_office__floor",
+        "w_booth_n",
+        "w_conf_jog",
+        "w_conf_n",
+        "w_ext_n",
+        "w_off_e"
+      ]
+    },
+    "gym": {
+      "exr": "lightmaps/lm_gym.exr",
+      "size": 1024,
+      "flipY": true,
+      "texels_per_meter": 64.0,
+      "objects": [
+        "col_s1",
+        "r_gym__ceiling",
+        "r_gym__floor",
+        "w_gym_e",
+        "w_gym_w"
+      ]
+    },
+    "small": {
+      "exr": "lightmaps/lm_small.exr",
+      "size": 1024,
+      "flipY": true,
+      "texels_per_meter": 100.0,
+      "objects": [
+        "col_s3",
+        "r_small__ceiling",
+        "r_small__floor"
+      ]
+    },
+    "corridor": {
+      "exr": "lightmaps/lm_corridor.exr",
+      "size": 2048,
+      "flipY": true,
+      "texels_per_meter": 64.0,
+      "objects": [
+        "r_corridor__ceiling",
+        "r_corridor__floor",
+        "w_corr_n",
+        "w_corr_s_e"
+      ]
+    },
+    "nw_existing": {
+      "exr": "lightmaps/lm_nw_existing.exr",
+      "size": 2048,
+      "flipY": true,
+      "texels_per_meter": 64.0,
+      "objects": [
+        "r_nw_existing__ceiling",
+        "r_nw_existing__floor",
+        "w_ext_w",
+        "w_off_w"
+      ]
+    }
+  }
+}

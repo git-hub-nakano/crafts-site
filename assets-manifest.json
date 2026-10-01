@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "kloofendal_overcast_puresky",
+      "type": "hdri",
+      "name": "Kloofendal Overcast (Pure Sky)",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_overcast_puresky_2k.hdr",
+      "page": "https://polyhaven.com/a/kloofendal_overcast_puresky",
+      "license": "CC0-1.0",
+      "resolution": "2k",
+      "format": "hdr",
+      "path": "assets/hdri/kloofendal_overcast_puresky/kloofendal_overcast_puresky_2k.hdr",
+      "bytes": 4335717,
+      "sha256": "312b1b04b7f10057a4f1418abc59d1166c8933cc93fc72051502edaf8d6b2fcd",
+      "retrieved": "2026-09-30",
+      "authors": [
+        "Greg Zaal"
+      ]
+    },
+    {
+      "id": "Fabric024",
+      "type": "material",
+      "name": "Fabric 024",
+      "url": "https://ambientcg.com/get?file=Fabric024_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Fabric024",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Fabric024/Fabric024_2K-JPG_Color.jpg",
+      "bytes": 7078134,
+      "sha256": "b8ed8bce90e093b6f1e2b45f14d980a60b5776dd4504bc618c871e8855918329",
+      "files": [
+        {
+          "path": "assets/materials/Fabric024/Fabric024_2K-JPG_Color.jpg",
+          "sha256": "b8ed8bce90e093b6f1e2b45f14d980a60b5776dd4504bc618c871e8855918329",
+          "bytes": 7078134
+        },
+        {
+          "path": "assets/materials/Fabric024/Fabric024_2K-JPG_NormalGL.jpg",
+          "sha256": "896e35742ca31124a8a0d43455e0aae0403a6722591bc1998a4589f442ea693f",
+          "bytes": 9736107
+        },
+        {
+          "path": "assets/materials/Fabric024/Fabric024_2K-JPG_Roughness.jpg",
+          "sha256": "c63a5df2365ca426f0c482ecf48742e6e14d46feb1ecb1eacd2acabcfc7ae12f",
+          "bytes": 2692706
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Fabric024/Fabric024_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Fabric024/Fabric024_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Fabric024/Fabric024_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "92fde7048240e40fa55e14df5a5ac8feac191ee0ec2b3faa35fa83a1b31107b6",
+        "bytes": 33944467
+      },
+      "dimensions_cm": [
+        0,
+        0
+      ],
+      "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "Fabric030",
+      "type": "material",
+      "name": "Fabric 030",
+      "url": "https://ambientcg.com/get?file=Fabric030_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Fabric030",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Fabric030/Fabric030_2K-JPG_Color.jpg",
+      "bytes": 7286913,
+      "sha256": "7aa2ae8d953523c1e7489b4fa7ffd3cfda8f463738db4ddebbbaf126a1ee351a",
+      "files": [
+        {
+          "path": "assets/materials/Fabric030/Fabric030_2K-JPG_Color.jpg",
+          "sha256": "7aa2ae8d953523c1e7489b4fa7ffd3cfda8f463738db4ddebbbaf126a1ee351a",
+          "bytes": 7286913
+        },
+        {
+          "path": "assets/materials/Fabric030/Fabric030_2K-JPG_NormalGL.jpg",
+          "sha256": "7c871bf6969e45e5aa11c5d04c7ad141dbc0aadf1124b7eeb9b0b42eb0c8890b",
+          "bytes": 10149065
+        },
+        {
+          "path": "assets/materials/Fabric030/Fabric030_2K-JPG_Roughness.jpg",
+          "sha256": "ac4806ea54090d5979f5052eb02f72b27cb01762ebfafa82cce2464e5274c1ec",
+          "bytes": 3421323
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Fabric030/Fabric030_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Fabric030/Fabric030_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Fabric030/Fabric030_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "7fc77fde6203911713a2fa41fa54f41f400c2670f7f7a3f4d57567dfdbf733e8",
+        "bytes": 38032768
+      },
+      "dimensions_cm": [
+        0,
+        0
+      ],
+      "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "Metal027",
+      "type": "material",
+      "name": "Metal 027",
+      "url": "https://ambientcg.com/get?file=Metal027_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Metal027",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Metal027/Metal027_2K-JPG_Color.jpg",
+      "bytes": 3659788,
+      "sha256": "690e45e89203ab1a1b1863e90197334eb33418cec56db403616cbc0d28fb0294",
+      "files": [
+        {
+          "path": "assets/materials/Metal027/Metal027_2K-JPG_Color.jpg",
+          "sha256": "690e45e89203ab1a1b1863e90197334eb33418cec56db403616cbc0d28fb0294",
+          "bytes": 3659788
+        },
+        {
+          "path": "assets/materials/Metal027/Metal027_2K-JPG_NormalGL.jpg",
+          "sha256": "b2a65d05e79b8a1cd327b7d2205314cd4e866680fcb3d0e9aaa2d3e751b3d524",
+          "bytes": 6850809
+        },
+        {
+          "path": "assets/materials/Metal027/Metal027_2K-JPG_Roughness.jpg",
+          "sha256": "e6954bfb0bb8c7d3751e93982d00449681e5b6b3b730e98e5b6430b6d008712d",
+          "bytes": 2695719
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Metal027/Metal027_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Metal027/Metal027_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Metal027/Metal027_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "17a17e2e83342e9280d06671c3136c9869fe112e31a7c9dee3e3a05ed3759544",
+        "bytes": 24858268
+      },
+      "dimensions_cm": [
+        0,
+        0
+      ],
+      "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "OfficeCeiling001",
+      "type": "material",
+      "name": "Office Ceiling 001",
+      "url": "https://ambientcg.com/get?file=OfficeCeiling001_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=OfficeCeiling001",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/OfficeCeiling001/OfficeCeiling001_2K-JPG_Color.jpg",
+      "bytes": 405322,
+      "sha256": "4c91beabdc532fa6c334be3093f8116a91b907425ae967558fea7a96de5cc05e",
+      "files": [
+        {
+          "path": "assets/materials/OfficeCeiling001/OfficeCeiling001_2K-JPG_Color.jpg",
+          "sha256": "4c91beabdc532fa6c334be3093f8116a91b907425ae967558fea7a96de5cc05e",
+          "bytes": 405322
+        },
+        {
+          "path": "assets/materials/OfficeCeiling001/OfficeCeiling001_2K-JPG_NormalGL.jpg",
+          "sha256": "ca6ee1ca416dbc1b594292a5c29b975c84180fe70838c909c776440139960d6f",
+          "bytes": 8380590
+        },
+        {
+          "path": "assets/materials/OfficeCeiling001/OfficeCeiling001_2K-JPG_Roughness.jpg",
+          "sha256": "b52a4f3af0ebe4a2e94e261ffbd32b83ff331b31214d1a700eb1439ede849723",
+          "bytes": 1048224
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/OfficeCeiling001/OfficeCeiling001_2K-JPG_Color.jpg",
+        "normal": "assets/materials/OfficeCeiling001/OfficeCeiling001_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/OfficeCeiling001/OfficeCeiling001_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "c28085beb79758a5364a72a0b2e3270836eaaf73fc7ed60b7f1f1212eb5c2653",
+        "bytes": 26204610
+      },
+      "dimensions_cm": [
+        385,
+        385
+      ],
+      "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "Paint004",
+      "type": "material",
+      "name": "Paint 004",
+      "url": "https://ambientcg.com/get?file=Paint004_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Paint004",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Paint004/Paint004_2K-JPG_Color.jpg",
+      "bytes": 540803,
+      "sha256": "8c58402615189b6c6cacf4a29144c83a6c3df90d7bb75b1cb8bfc7761a2f6d60",
+      "files": [
+        {
+          "path": "assets/materials/Paint004/Paint004_2K-JPG_Color.jpg",
+          "sha256": "8c58402615189b6c6cacf4a29144c83a6c3df90d7bb75b1cb8bfc7761a2f6d60",
+          "bytes": 540803
+        },
+        {
+          "path": "assets/materials/Paint004/Paint004_2K-JPG_NormalGL.jpg",
+          "sha256": "db9f42469266af73f6856eac1b1c48d6d6ebd6c912080acafcba7fcc624432be",
+          "bytes": 5625611
+        },
+        {
+          "path": "assets/materials/Paint004/Paint004_2K-JPG_Roughness.jpg",
+          "sha256": "8698d44c53c044fa623af3fe24a9f2b7ec265889116bd347624d3e7e9b4978a2",
+          "bytes": 1943783
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Paint004/Paint004_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Paint004/Paint004_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Paint004/Paint004_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "939e16b5a1ac58ea869691b3d6fc8ecf8ef92c36ab8349af5a9afbf09e00c6f8",
+        "bytes": 18778246
+      },
+      "dimensions_cm": [
+        0,
+        0
+      ],
+      "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "Rubber001",
+      "type": "material",
+      "name": "Rubber 001",
+      "url": "https://ambientcg.com/get?file=Rubber001_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Rubber001",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Rubber001/Rubber001_2K-JPG_Color.jpg",
+      "bytes": 4479634,
+      "sha256": "d712c25987d3e6f40e3f37fae1ce1a4a4155d5e27cff64dadf2bbe140979dd98",
+      "files": [
+        {
+          "path": "assets/materials/Rubber001/Rubber001_2K-JPG_Color.jpg",
+          "sha256": "d712c25987d3e6f40e3f37fae1ce1a4a4155d5e27cff64dadf2bbe140979dd98",
+          "bytes": 4479634
+        },
+        {
+          "path": "assets/materials/Rubber001/Rubber001_2K-JPG_NormalGL.jpg",
+          "sha256": "61bf1b38eae723913275a1de5eb08d4ac543f11e28f4ac6f596a0644169010fc",
+          "bytes": 9238212
+        },
+        {
+          "path": "assets/materials/Rubber001/Rubber001_2K-JPG_Roughness.jpg",
+          "sha256": "dc137f95179a4ae42d67819750d78c3fe878d438b789cf96b33947618305a275",
+          "bytes": 3042709
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Rubber001/Rubber001_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Rubber001/Rubber001_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Rubber001/Rubber001_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "f98b7b58f5f2539432ea79aa96daa1c547deb332b83e1c6b9efa89a7c65a7d0e",
+        "bytes": 30344118
+      },
+      "dimensions_cm": [
+        75,
+        75
+      ],
+      "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "Wood058",
+      "type": "material",
+      "name": "Wood 058",
+      "url": "https://ambientcg.com/get?file=Wood058_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Wood058",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Wood058/Wood058_2K-JPG_Color.jpg",
+      "bytes": 5380326,
+      "sha256": "6b61fe4447ff3691fc5f6e2d8b954fb93b3f691dc900a9181af4650753019484",
+      "files": [
+        {
+          "path": "assets/materials/Wood058/Wood058_2K-JPG_Color.jpg",
+          "sha256": "6b61fe4447ff3691fc5f6e2d8b954fb93b3f691dc900a9181af4650753019484",
+          "bytes": 5380326
+        },
+        {
+          "path": "assets/materials/Wood058/Wood058_2K-JPG_NormalGL.jpg",
+          "sha256": "281fc018b6590bb9d7b722ccb508c49ac7b98bd58333fb05a6ac3209115c4591",
+          "bytes": 6890413
+        },
+        {
+          "path": "assets/materials/Wood058/Wood058_2K-JPG_Roughness.jpg",
+          "sha256": "c2c6ffe5ab82fe6e4031d0754533fe4c2550cc6e7ab9a96881dd06eaa4ae5fe5",
+          "bytes": 2366437
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Wood058/Wood058_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Wood058/Wood058_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Wood058/Wood058_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "35ef1d742e71af8a9f0fa53f7d909622557874b804d1dea52ca10ff971eed2ca",
+        "bytes": 25491483
+      },
+      "dimensions_cm": [
+        40,
+        40
+      ],
+      "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "SchoolChair_01",
+      "type": "model",
+      "name": "School Chair 01",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/SchoolChair_01/SchoolChair_01_1k.gltf",
+      "page": "https://polyhaven.com/a/SchoolChair_01",
+      "license": "CC0-1.0",
+      "resolution": "1k",
+      "format": "gltf",
+      "path": "assets/models/SchoolChair_01/SchoolChair_01_1k.gltf",
+      "bytes": 2695,
+      "sha256": "1db6aca4bf379c2d568b2068492dcfcda15d764c0c3d98a970055af25b46281e",
+      "files": [
+        {
+          "path": "assets/models/SchoolChair_01/SchoolChair_01_1k.gltf",
+          "sha256": "1db6aca4bf379c2d568b2068492dcfcda15d764c0c3d98a970055af25b46281e",
+          "bytes": 2695,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/SchoolChair_01/SchoolChair_01_1k.gltf"
+        },
+        {
+          "path": "assets/models/SchoolChair_01/SchoolChair_01.bin",
+          "sha256": "7d64d556ba88d3962778085b9a190f1adb0d84e667bca8ef032c0ae34b31a9fe",
+          "bytes": 134912,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/SchoolChair_01/SchoolChair_01.bin"
+        },
+        {
+          "path": "assets/models/SchoolChair_01/textures/SchoolChair_01_arm_1k.jpg",
+          "sha256": "ff773eb01c9d59130dc3cc0274951ac626d73fa1b2f7eee519af4ca80835568b",
+          "bytes": 104994,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/SchoolChair_01/SchoolChair_01_arm_1k.jpg"
+        },
+        {
+          "path": "assets/models/SchoolChair_01/textures/SchoolChair_01_diff_1k.jpg",
+          "sha256": "f10ae4dbddfb056ef716770ebd96e0eff0aa6f0b5ad0f263ff51c5cade6e1d8f",
+          "bytes": 52590,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/SchoolChair_01/SchoolChair_01_diff_1k.jpg"
+        },
+        {
+          "path": "assets/models/SchoolChair_01/textures/SchoolChair_01_nor_gl_1k.jpg",
+          "sha256": "4ee930562ad26e8c98af75e8aa6577d01cb56f6d22628f4e95c385e5364f0623",
+          "bytes": 189532,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/SchoolChair_01/SchoolChair_01_nor_gl_1k.jpg"
+        }
+      ],
+      "dimensions_mm": [
+        565.9,
+        675.3,
+        1006.0
+      ],
+      "polycount": 5072,
+      "retrieved": "2026-10-01",
+      "authors": [
+        "Ethan Place"
+      ]
+    },
+    {
+      "id": "metal_stool_03",
+      "type": "model",
+      "name": "Metal Stool 03",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/metal_stool_03/metal_stool_03_1k.gltf",
+      "page": "https://polyhaven.com/a/metal_stool_03",
+      "license": "CC0-1.0",
+      "resolution": "1k",
+      "format": "gltf",
+      "path": "assets/models/metal_stool_03/metal_stool_03_1k.gltf",
+      "bytes": 2784,
+      "sha256": "97d7b64c170f6c91982be77beab1c994743ca3d9dc90525e8d3618d402597516",
+      "files": [
+        {
+          "path": "assets/models/metal_stool_03/metal_stool_03_1k.gltf",
+          "sha256": "97d7b64c170f6c91982be77beab1c994743ca3d9dc90525e8d3618d402597516",
+          "bytes": 2784,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/metal_stool_03/metal_stool_03_1k.gltf"
+        },
+        {
+          "path": "assets/models/metal_stool_03/metal_stool_03.bin",
+          "sha256": "77319f207db1d63ecf8775dad6dce37809967685a73489613a9f2c67b63c9228",
+          "bytes": 185440,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/metal_stool_03/metal_stool_03.bin"
+        },
+        {
+          "path": "assets/models/metal_stool_03/textures/metal_stool_03_arm_1k.jpg",
+          "sha256": "4919d3aa81a6657db8d5d52f077c0a687f29595b6a1177f53305a89354c9b527",
+          "bytes": 892710,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_stool_03/metal_stool_03_arm_1k.jpg"
+        },
+        {
+          "path": "assets/models/metal_stool_03/textures/metal_stool_03_diff_1k.jpg",
+          "sha256": "94c961f96343c780cc6cc0f4d6b045ea62ba9ff04ba52d30c60d933a9b650d98",
+          "bytes": 690251,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_stool_03/metal_stool_03_diff_1k.jpg"
+        },
+        {
+          "path": "assets/models/metal_stool_03/textures/metal_stool_03_nor_gl_1k.jpg",
+          "sha256": "dfa87bb714c4af869a375f1a12a872649017dcdba9b23c3fe5d34904b5d60096",
+          "bytes": 518434,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_stool_03/metal_stool_03_nor_gl_1k.jpg"
+        }
+      ],
+      "dimensions_mm": [
+        460.6,
+        470.6,
+        1023.1
+      ],
+      "polycount": 6576,
+      "retrieved": "2026-10-01",
+      "authors": [
+        "Flo Tasser"
+      ]
+    }
+  ]
+}
