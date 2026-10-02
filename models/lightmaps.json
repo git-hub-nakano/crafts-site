@@ -3,7 +3,7 @@
   "intensity": 1.0,
   "colorSpace": "srgb-linear",
   "channel": 1,
-  "plan_digest": "sha256:ee7cd1ad07d7008dc071a078d6dd1ee470b799eedebe4a49abde2c5a964420fd",
+  "plan_digest": "sha256:af60147926c4d6c40a400d49cce5d04698a531936735e5472e982bf8b30b7120",
   "atlases": {
     "booth_1": {
       "exr": "lightmaps/lm_booth_1.exr",
@@ -11,6 +11,7 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__booth_1__m_baseboard",
         "batch__furniture__booth_1__m_desk_top",
         "r_booth_1__ceiling",
         "r_booth_1__floor",
@@ -23,6 +24,7 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__booth_2__m_baseboard",
         "batch__furniture__booth_2__m_desk_top",
         "r_booth_2__ceiling",
         "r_booth_2__floor",
@@ -35,6 +37,7 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__booth_3__m_baseboard",
         "batch__furniture__booth_3__m_desk_top",
         "r_booth_3__ceiling",
         "r_booth_3__floor",
@@ -47,6 +50,7 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__booth_4__m_baseboard",
         "batch__furniture__booth_4__m_desk_top",
         "r_booth_4__ceiling",
         "r_booth_4__floor",
@@ -59,6 +63,7 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__booth_5__m_baseboard",
         "batch__furniture__booth_5__m_desk_top",
         "r_booth_5__ceiling",
         "r_booth_5__floor",
@@ -71,6 +76,7 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__booth_6__m_baseboard",
         "batch__furniture__booth_6__m_desk_top",
         "r_booth_6__ceiling",
         "r_booth_6__floor"
@@ -82,9 +88,12 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__conf_a__m_baseboard",
+        "batch__furniture__conf_a__m_ac",
         "batch__furniture__conf_a__m_chair",
-        "batch__furniture__conf_a__m_desk_top",
+        "batch__furniture__conf_a__m_conf_top",
         "batch__furniture__conf_a__m_metal",
+        "batch__furniture__conf_a__m_screen",
         "col_s2",
         "r_conf_a__ceiling",
         "r_conf_a__floor",
@@ -97,9 +106,11 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__conf_b__m_baseboard",
         "batch__furniture__conf_b__m_chair",
         "batch__furniture__conf_b__m_desk_top",
         "batch__furniture__conf_b__m_metal",
+        "batch__furniture__conf_b__m_screen",
         "r_conf_b__ceiling",
         "r_conf_b__floor",
         "w_conf_bs",
@@ -112,12 +123,50 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
-        "batch__furniture__conf_n__m_chair",
-        "batch__furniture__conf_n__m_desk_top",
+        "batch__fitting__conf_n__floor_carpet_tweed",
+        "batch__fitting__conf_n__m_baseboard",
+        "batch__fitting__conf_n__m_frame",
+        "batch__fitting__conf_n__m_frosted",
+        "batch__furniture__conf_n__m_ac",
         "batch__furniture__conf_n__m_metal",
+        "batch__furniture__conf_n__m_screen",
         "r_conf_n__ceiling",
         "r_conf_n__floor",
         "w_booth_e"
+      ]
+    },
+    "corridor": {
+      "exr": "lightmaps/lm_corridor.exr",
+      "size": 2048,
+      "flipY": true,
+      "texels_per_meter": 64.0,
+      "objects": [
+        "batch__fitting__corridor__floor_tile_stone",
+        "batch__fitting__corridor__m_baseboard",
+        "batch__fitting__corridor__m_frame",
+        "r_corridor__ceiling",
+        "r_corridor__floor",
+        "w_corr_n",
+        "w_corr_n_p2",
+        "w_corr_s_e",
+        "w_corr_s_p1",
+        "w_corr_s_p2",
+        "w_corr_s_p3"
+      ]
+    },
+    "gym": {
+      "exr": "lightmaps/lm_gym.exr",
+      "size": 1024,
+      "flipY": true,
+      "texels_per_meter": 64.0,
+      "objects": [
+        "batch__fitting__gym__m_baseboard",
+        "batch__furniture__gym__m_ac",
+        "col_s1",
+        "r_gym__ceiling",
+        "r_gym__floor",
+        "w_gym_e",
+        "w_gym_w"
       ]
     },
     "lounge": {
@@ -126,6 +175,9 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__lounge__m_baseboard",
+        "batch__fitting__lounge__m_blind",
+        "batch__fitting__lounge__m_window_frame",
         "batch__furniture__lounge__m_appliance",
         "batch__furniture__lounge__m_bench",
         "batch__furniture__lounge__m_chair",
@@ -138,37 +190,46 @@
         "w_ext_ne"
       ]
     },
+    "nw_existing": {
+      "exr": "lightmaps/lm_nw_existing.exr",
+      "size": 1024,
+      "flipY": true,
+      "texels_per_meter": 64.0,
+      "objects": [
+        "batch__fitting__nw_existing__m_baseboard",
+        "batch__fitting__nw_existing__m_frame",
+        "r_nw_existing__ceiling",
+        "r_nw_existing__floor",
+        "w_ext_w",
+        "w_off_w"
+      ]
+    },
     "office": {
       "exr": "lightmaps/lm_office.exr",
       "size": 4096,
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__office__floor_carpet_tweed",
+        "batch__fitting__office__m_baseboard",
+        "batch__fitting__office__m_blind",
+        "batch__fitting__office__m_frame",
+        "batch__fitting__office__m_window_frame",
+        "batch__furniture__office__m_ac",
         "batch__furniture__office__m_appliance",
         "batch__furniture__office__m_chair",
+        "batch__furniture__office__m_desk_leg",
         "batch__furniture__office__m_desk_top",
         "batch__furniture__office__m_metal",
         "col_n1",
         "r_office__ceiling",
         "r_office__floor",
         "w_booth_n",
+        "w_conf_e",
         "w_conf_jog",
         "w_conf_n",
         "w_ext_n",
         "w_off_e"
-      ]
-    },
-    "gym": {
-      "exr": "lightmaps/lm_gym.exr",
-      "size": 1024,
-      "flipY": true,
-      "texels_per_meter": 64.0,
-      "objects": [
-        "col_s1",
-        "r_gym__ceiling",
-        "r_gym__floor",
-        "w_gym_e",
-        "w_gym_w"
       ]
     },
     "small": {
@@ -177,33 +238,10 @@
       "flipY": true,
       "texels_per_meter": 100.0,
       "objects": [
+        "batch__fitting__small__m_baseboard",
         "col_s3",
         "r_small__ceiling",
         "r_small__floor"
-      ]
-    },
-    "corridor": {
-      "exr": "lightmaps/lm_corridor.exr",
-      "size": 2048,
-      "flipY": true,
-      "texels_per_meter": 64.0,
-      "objects": [
-        "r_corridor__ceiling",
-        "r_corridor__floor",
-        "w_corr_n",
-        "w_corr_s_e"
-      ]
-    },
-    "nw_existing": {
-      "exr": "lightmaps/lm_nw_existing.exr",
-      "size": 2048,
-      "flipY": true,
-      "texels_per_meter": 64.0,
-      "objects": [
-        "r_nw_existing__ceiling",
-        "r_nw_existing__floor",
-        "w_ext_w",
-        "w_off_w"
       ]
     }
   }

@@ -19,6 +19,70 @@
       ]
     },
     {
+      "id": "schadowplatz",
+      "type": "hdri",
+      "name": "Schadowplatz",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/schadowplatz_2k.hdr",
+      "page": "https://polyhaven.com/a/schadowplatz",
+      "license": "CC0-1.0",
+      "resolution": "2k",
+      "format": "hdr",
+      "path": "assets/hdri/schadowplatz/schadowplatz_2k.hdr",
+      "bytes": 6283016,
+      "sha256": "68b6e49507e86247ef30b31619ac389efe68ad6ae4ba60e13937aab5e7477051",
+      "retrieved": "2026-10-02",
+      "authors": [
+        "Greg Zaal"
+      ]
+    },
+    {
+      "id": "Carpet014",
+      "type": "material",
+      "name": "Carpet 014",
+      "url": "https://ambientcg.com/get?file=Carpet014_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Carpet014",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Carpet014/Carpet014_2K-JPG_Color.jpg",
+      "bytes": 4802065,
+      "sha256": "c1281d3e69844ab8c5cb6cd3e8703b2312cd07ee4807e180bad4539f9b1813b1",
+      "files": [
+        {
+          "path": "assets/materials/Carpet014/Carpet014_2K-JPG_Color.jpg",
+          "sha256": "c1281d3e69844ab8c5cb6cd3e8703b2312cd07ee4807e180bad4539f9b1813b1",
+          "bytes": 4802065
+        },
+        {
+          "path": "assets/materials/Carpet014/Carpet014_2K-JPG_NormalGL.jpg",
+          "sha256": "e34678be43b068664700c4c9e274ac115764baeffec6fe6e42953a1500a653c0",
+          "bytes": 9254413
+        },
+        {
+          "path": "assets/materials/Carpet014/Carpet014_2K-JPG_Roughness.jpg",
+          "sha256": "dee348880f1db25c9ca339484dacfbe5e78df3740e7aa1d01d2baed4b0731b59",
+          "bytes": 2551042
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Carpet014/Carpet014_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Carpet014/Carpet014_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Carpet014/Carpet014_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "2b0962ddbda95b1dbcef2e8a30d3adcf97ff00ab4ba5ee8ad5ff7b5ea89da874",
+        "bytes": 28848854
+      },
+      "dimensions_cm": [
+        0,
+        0
+      ],
+      "retrieved": "2026-10-02",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
       "id": "Fabric024",
       "type": "material",
       "name": "Fabric 024",
@@ -108,6 +172,100 @@
         0
       ],
       "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "Fabric034",
+      "type": "material",
+      "name": "Fabric 034",
+      "url": "https://ambientcg.com/get?file=Fabric034_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Fabric034",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Fabric034/Fabric034_2K-JPG_Color.jpg",
+      "bytes": 4877156,
+      "sha256": "fb7e0bc5da7bd0d62d20140e936c89884212f0cb7e44b5c6f8b9837cddd2242a",
+      "files": [
+        {
+          "path": "assets/materials/Fabric034/Fabric034_2K-JPG_Color.jpg",
+          "sha256": "fb7e0bc5da7bd0d62d20140e936c89884212f0cb7e44b5c6f8b9837cddd2242a",
+          "bytes": 4877156
+        },
+        {
+          "path": "assets/materials/Fabric034/Fabric034_2K-JPG_NormalGL.jpg",
+          "sha256": "3e42b594ddb376a1f9f6909b236bc1f280469b08c500fa4f199d29f9e8591c5a",
+          "bytes": 9607311
+        },
+        {
+          "path": "assets/materials/Fabric034/Fabric034_2K-JPG_Roughness.jpg",
+          "sha256": "b8be247a5ea8e54224d8c5d88e057611eec8721193ce881d08dcdcaa09cd5700",
+          "bytes": 2787687
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Fabric034/Fabric034_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Fabric034/Fabric034_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Fabric034/Fabric034_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "d1c34ced545c3f3a2c77cd4f67888bf8509bdb690edf60bcb47e6cbc1c960baf",
+        "bytes": 31422580
+      },
+      "dimensions_cm": [
+        0,
+        0
+      ],
+      "retrieved": "2026-10-02",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "Fabric045",
+      "type": "material",
+      "name": "Fabric 045",
+      "url": "https://ambientcg.com/get?file=Fabric045_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Fabric045",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Fabric045/Fabric045_2K-JPG_Color.jpg",
+      "bytes": 3959220,
+      "sha256": "dbdff1578337534ae78cf625d80613f9082f3e58884acad9ae08ecd20bf61e4b",
+      "files": [
+        {
+          "path": "assets/materials/Fabric045/Fabric045_2K-JPG_Color.jpg",
+          "sha256": "dbdff1578337534ae78cf625d80613f9082f3e58884acad9ae08ecd20bf61e4b",
+          "bytes": 3959220
+        },
+        {
+          "path": "assets/materials/Fabric045/Fabric045_2K-JPG_NormalGL.jpg",
+          "sha256": "87ca92118285feadcb5c76275a9752967688904ebdbdf82c67469d36d3cce009",
+          "bytes": 9960154
+        },
+        {
+          "path": "assets/materials/Fabric045/Fabric045_2K-JPG_Roughness.jpg",
+          "sha256": "e67ea0315dabbc6a6260681a4bf5ec363b3a5051e847da629e4db26e71605912",
+          "bytes": 2774586
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Fabric045/Fabric045_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Fabric045/Fabric045_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Fabric045/Fabric045_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "e6ca2d15806601a0f9199981dd3c3efe80519ecd9d806910b2b0ab3a8320e770",
+        "bytes": 31537279
+      },
+      "dimensions_cm": [
+        0,
+        0
+      ],
+      "retrieved": "2026-10-02",
       "authors": [
         "ambientCG"
       ]
@@ -249,6 +407,53 @@
         0
       ],
       "retrieved": "2026-10-01",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "PavingStones126A",
+      "type": "material",
+      "name": "Paving Stones 126 A",
+      "url": "https://ambientcg.com/get?file=PavingStones126A_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=PavingStones126A",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/PavingStones126A/PavingStones126A_2K-JPG_Color.jpg",
+      "bytes": 6103960,
+      "sha256": "6e9d103c5c85705c20ca2d203bb94d91f4948f8d0a825ac3d7359066d7313abb",
+      "files": [
+        {
+          "path": "assets/materials/PavingStones126A/PavingStones126A_2K-JPG_Color.jpg",
+          "sha256": "6e9d103c5c85705c20ca2d203bb94d91f4948f8d0a825ac3d7359066d7313abb",
+          "bytes": 6103960
+        },
+        {
+          "path": "assets/materials/PavingStones126A/PavingStones126A_2K-JPG_NormalGL.jpg",
+          "sha256": "52bddb586a14d004a21d99f97760efb855bb48838c873ae0634d23249f642f8e",
+          "bytes": 8803976
+        },
+        {
+          "path": "assets/materials/PavingStones126A/PavingStones126A_2K-JPG_Roughness.jpg",
+          "sha256": "044c690177951682a608f6e5d19acf8a6bd8ccf27179c4cacdf071335f56dfe8",
+          "bytes": 2628339
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/PavingStones126A/PavingStones126A_2K-JPG_Color.jpg",
+        "normal": "assets/materials/PavingStones126A/PavingStones126A_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/PavingStones126A/PavingStones126A_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "60f65a5ed54edaa76f72ea1a0eac3b81802d26be45515059319afb542104663e",
+        "bytes": 32595268
+      },
+      "dimensions_cm": [
+        350,
+        350
+      ],
+      "retrieved": "2026-10-02",
       "authors": [
         "ambientCG"
       ]
