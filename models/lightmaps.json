@@ -3,7 +3,7 @@
   "intensity": 1.0,
   "colorSpace": "srgb-linear",
   "channel": 1,
-  "plan_digest": "sha256:af60147926c4d6c40a400d49cce5d04698a531936735e5472e982bf8b30b7120",
+  "plan_digest": "sha256:4c402919f4610e2c2f464d2c58d1ca79e22c4565a6af2ece0c2b6fc261794a3f",
   "atlases": {
     "booth_1": {
       "exr": "lightmaps/lm_booth_1.exr",

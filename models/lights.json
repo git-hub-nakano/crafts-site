@@ -1,5 +1,5 @@
 {
-  "plan_digest": "sha256:af60147926c4d6c40a400d49cce5d04698a531936735e5472e982bf8b30b7120",
+  "plan_digest": "sha256:4c402919f4610e2c2f464d2c58d1ca79e22c4565a6af2ece0c2b6fc261794a3f",
   "lights": [
     {
       "id": "l_booth_1_0",
@@ -18,8 +18,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_booth_1"
     },
     {
@@ -39,8 +39,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_booth_2"
     },
     {
@@ -60,8 +60,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_booth_3"
     },
     {
@@ -81,8 +81,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_booth_4"
     },
     {
@@ -102,8 +102,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_booth_5"
     },
     {
@@ -123,8 +123,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_booth_6"
     },
     {
@@ -144,8 +144,8 @@
         0,
         -1
       ],
-      "watts": 8.2343,
-      "lumens": 5624.01,
+      "watts": 10.7011,
+      "lumens": 7308.84,
       "room": "r_conf_a"
     },
     {
@@ -165,8 +165,8 @@
         0,
         -1
       ],
-      "watts": 8.2343,
-      "lumens": 5624.01,
+      "watts": 10.7011,
+      "lumens": 7308.84,
       "room": "r_conf_a"
     },
     {
@@ -186,8 +186,8 @@
         0,
         -1
       ],
-      "watts": 8.2343,
-      "lumens": 5624.01,
+      "watts": 10.7011,
+      "lumens": 7308.84,
       "room": "r_conf_a"
     },
     {
@@ -207,8 +207,8 @@
         0,
         -1
       ],
-      "watts": 10.7674,
-      "lumens": 7354.11,
+      "watts": 13.993,
+      "lumens": 9557.24,
       "room": "r_conf_b"
     },
     {
@@ -228,8 +228,8 @@
         0,
         -1
       ],
-      "watts": 10.7674,
-      "lumens": 7354.11,
+      "watts": 13.993,
+      "lumens": 9557.24,
       "room": "r_conf_b"
     },
     {
@@ -249,8 +249,8 @@
         0,
         -1
       ],
-      "watts": 32.3426,
-      "lumens": 22090.0,
+      "watts": 42.0454,
+      "lumens": 28717.0,
       "room": "r_conf_n"
     },
     {
@@ -270,8 +270,8 @@
         0,
         -1
       ],
-      "watts": 0.9608,
-      "lumens": 656.24,
+      "watts": 1.2565,
+      "lumens": 858.16,
       "room": "r_corridor"
     },
     {
@@ -291,8 +291,8 @@
         0,
         -1
       ],
-      "watts": 0.9608,
-      "lumens": 656.24,
+      "watts": 1.2565,
+      "lumens": 858.16,
       "room": "r_corridor"
     },
     {
@@ -312,8 +312,8 @@
         0,
         -1
       ],
-      "watts": 0.9608,
-      "lumens": 656.24,
+      "watts": 1.2565,
+      "lumens": 858.16,
       "room": "r_corridor"
     },
     {
@@ -333,8 +333,8 @@
         0,
         -1
       ],
-      "watts": 0.9608,
-      "lumens": 656.24,
+      "watts": 1.2565,
+      "lumens": 858.16,
       "room": "r_corridor"
     },
     {
@@ -354,8 +354,8 @@
         0,
         -1
       ],
-      "watts": 0.9608,
-      "lumens": 656.24,
+      "watts": 1.2565,
+      "lumens": 858.16,
       "room": "r_corridor"
     },
     {
@@ -375,8 +375,8 @@
         0,
         -1
       ],
-      "watts": 0.9608,
-      "lumens": 656.24,
+      "watts": 1.2565,
+      "lumens": 858.16,
       "room": "r_corridor"
     },
     {
@@ -396,8 +396,8 @@
         0,
         -1
       ],
-      "watts": 0.9608,
-      "lumens": 656.24,
+      "watts": 1.2565,
+      "lumens": 858.16,
       "room": "r_corridor"
     },
     {
@@ -417,8 +417,8 @@
         0,
         -1
       ],
-      "watts": 0.9608,
-      "lumens": 656.24,
+      "watts": 1.2565,
+      "lumens": 858.16,
       "room": "r_corridor"
     },
     {
@@ -438,8 +438,8 @@
         0,
         -1
       ],
-      "watts": 4.1728,
-      "lumens": 2850.0,
+      "watts": 5.4173,
+      "lumens": 3700.0,
       "room": "r_gym"
     },
     {
@@ -459,8 +459,8 @@
         0,
         -1
       ],
-      "watts": 4.1728,
-      "lumens": 2850.0,
+      "watts": 5.4173,
+      "lumens": 3700.0,
       "room": "r_gym"
     },
     {
@@ -480,8 +480,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_lounge"
     },
     {
@@ -501,8 +501,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_lounge"
     },
     {
@@ -522,8 +522,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_lounge"
     },
     {
@@ -543,8 +543,8 @@
         0,
         -1
       ],
-      "watts": 1.1713,
-      "lumens": 800.0,
+      "watts": 1.5227,
+      "lumens": 1040.0,
       "room": "r_lounge"
     },
     {
@@ -564,8 +564,8 @@
         0,
         -1
       ],
-      "watts": 5.8565,
-      "lumens": 4000.0,
+      "watts": 7.6135,
+      "lumens": 5200.0,
       "room": "r_nw_existing"
     },
     {
@@ -585,8 +585,8 @@
         0,
         -1
       ],
-      "watts": 5.8565,
-      "lumens": 4000.0,
+      "watts": 7.6135,
+      "lumens": 5200.0,
       "room": "r_nw_existing"
     },
     {
@@ -606,8 +606,8 @@
         0,
         -1
       ],
-      "watts": 5.8565,
-      "lumens": 4000.0,
+      "watts": 7.6135,
+      "lumens": 5200.0,
       "room": "r_nw_existing"
     },
     {
@@ -627,8 +627,8 @@
         0,
         -1
       ],
-      "watts": 5.8565,
-      "lumens": 4000.0,
+      "watts": 7.6135,
+      "lumens": 5200.0,
       "room": "r_nw_existing"
     },
     {
@@ -648,8 +648,8 @@
         0,
         -1
       ],
-      "watts": 5.8565,
-      "lumens": 4000.0,
+      "watts": 7.6135,
+      "lumens": 5200.0,
       "room": "r_nw_existing"
     },
     {
@@ -669,8 +669,8 @@
         0,
         -1
       ],
-      "watts": 5.8565,
-      "lumens": 4000.0,
+      "watts": 7.6135,
+      "lumens": 5200.0,
       "room": "r_nw_existing"
     },
     {
@@ -690,8 +690,8 @@
         0,
         -1
       ],
-      "watts": 24.7929,
-      "lumens": 16933.56,
+      "watts": 32.1873,
+      "lumens": 21983.92,
       "room": "r_office"
     },
     {
@@ -711,8 +711,8 @@
         0,
         -1
       ],
-      "watts": 24.7929,
-      "lumens": 16933.56,
+      "watts": 32.1873,
+      "lumens": 21983.92,
       "room": "r_office"
     },
     {
@@ -732,8 +732,8 @@
         0,
         -1
       ],
-      "watts": 24.7929,
-      "lumens": 16933.56,
+      "watts": 32.1873,
+      "lumens": 21983.92,
       "room": "r_office"
     },
     {
@@ -753,8 +753,8 @@
         0,
         -1
       ],
-      "watts": 5.8565,
-      "lumens": 4000.0,
+      "watts": 7.6135,
+      "lumens": 5200.0,
       "room": "r_small"
     }
   ],
