@@ -3,7 +3,7 @@
   "intensity": 1.0,
   "colorSpace": "srgb-linear",
   "channel": 1,
-  "plan_digest": "sha256:4c402919f4610e2c2f464d2c58d1ca79e22c4565a6af2ece0c2b6fc261794a3f",
+  "plan_digest": "sha256:ecc50663cbdca8303f799f3580e0db3962283cf5d997446119d3bc12213ce352",
   "atlases": {
     "booth_1": {
       "exr": "lightmaps/lm_booth_1.exr",
@@ -91,6 +91,7 @@
         "batch__fitting__conf_a__m_baseboard",
         "batch__furniture__conf_a__m_ac",
         "batch__furniture__conf_a__m_chair",
+        "batch__furniture__conf_a__m_chair_frame",
         "batch__furniture__conf_a__m_conf_top",
         "batch__furniture__conf_a__m_metal",
         "batch__furniture__conf_a__m_screen",
@@ -108,6 +109,7 @@
       "objects": [
         "batch__fitting__conf_b__m_baseboard",
         "batch__furniture__conf_b__m_chair",
+        "batch__furniture__conf_b__m_chair_frame",
         "batch__furniture__conf_b__m_desk_top",
         "batch__furniture__conf_b__m_metal",
         "batch__furniture__conf_b__m_screen",
@@ -181,6 +183,7 @@
         "batch__furniture__lounge__m_appliance",
         "batch__furniture__lounge__m_bench",
         "batch__furniture__lounge__m_chair",
+        "batch__furniture__lounge__m_chair_frame",
         "batch__furniture__lounge__m_desk_top",
         "batch__furniture__lounge__m_furniture",
         "batch__furniture__lounge__m_metal",
@@ -218,6 +221,7 @@
         "batch__furniture__office__m_ac",
         "batch__furniture__office__m_appliance",
         "batch__furniture__office__m_chair",
+        "batch__furniture__office__m_chair_frame",
         "batch__furniture__office__m_desk_leg",
         "batch__furniture__office__m_desk_top",
         "batch__furniture__office__m_metal",

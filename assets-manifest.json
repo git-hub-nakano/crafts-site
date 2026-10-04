@@ -2,6 +2,40 @@
   "version": 1,
   "assets": [
     {
+      "id": "canary_wharf_8k",
+      "type": "hdri",
+      "name": "Canary Wharf",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/canary_wharf_8k.hdr",
+      "page": "https://polyhaven.com/a/canary_wharf",
+      "license": "CC0-1.0",
+      "resolution": "8k",
+      "format": "hdr",
+      "path": "assets/hdri/canary_wharf/canary_wharf_8k.hdr",
+      "bytes": 102809822,
+      "sha256": "714a8321077b711b4fbd0169acf40888b9abff72a4a5d8726b0cf963aca559a0",
+      "retrieved": "2026-10-04",
+      "authors": [
+        "Andreas Mischok"
+      ]
+    },
+    {
+      "id": "docklands_01_8k",
+      "type": "hdri",
+      "name": "Docklands 01",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/docklands_01_8k.hdr",
+      "page": "https://polyhaven.com/a/docklands_01",
+      "license": "CC0-1.0",
+      "resolution": "8k",
+      "format": "hdr",
+      "path": "assets/hdri/docklands_01/docklands_01_8k.hdr",
+      "bytes": 97267007,
+      "sha256": "57327b62f120a2ad3999251a1700aae1b66371db30bd8ae5c9e0c4ef2c26fd35",
+      "retrieved": "2026-10-04",
+      "authors": [
+        "Savva Zakharov"
+      ]
+    },
+    {
       "id": "kloofendal_overcast_puresky",
       "type": "hdri",
       "name": "Kloofendal Overcast (Pure Sky)",
@@ -19,6 +53,23 @@
       ]
     },
     {
+      "id": "potsdamer_platz_8k",
+      "type": "hdri",
+      "name": "Potsdamer Platz",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/potsdamer_platz_8k.hdr",
+      "page": "https://polyhaven.com/a/potsdamer_platz",
+      "license": "CC0-1.0",
+      "resolution": "8k",
+      "format": "hdr",
+      "path": "assets/hdri/potsdamer_platz/potsdamer_platz_8k.hdr",
+      "bytes": 93252378,
+      "sha256": "58bf23ccd1145e96b0f3ace2bebc6fccabcd3227b65b6b382a0c89791ee03b14",
+      "retrieved": "2026-10-04",
+      "authors": [
+        "Greg Zaal"
+      ]
+    },
+    {
       "id": "schadowplatz",
       "type": "hdri",
       "name": "Schadowplatz",
@@ -31,6 +82,23 @@
       "bytes": 6283016,
       "sha256": "68b6e49507e86247ef30b31619ac389efe68ad6ae4ba60e13937aab5e7477051",
       "retrieved": "2026-10-02",
+      "authors": [
+        "Greg Zaal"
+      ]
+    },
+    {
+      "id": "schadowplatz_8k",
+      "type": "hdri",
+      "name": "Schadowplatz",
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/8k/schadowplatz_8k.hdr",
+      "page": "https://polyhaven.com/a/schadowplatz",
+      "license": "CC0-1.0",
+      "resolution": "8k",
+      "format": "hdr",
+      "path": "assets/hdri/schadowplatz/schadowplatz_8k.hdr",
+      "bytes": 95966045,
+      "sha256": "3b606f225ec34b8306ae63a6faf29dfcf2bee9ae5b1d0858b12796cb2fc3a1a3",
+      "retrieved": "2026-10-04",
       "authors": [
         "Greg Zaal"
       ]
@@ -78,6 +146,53 @@
         0
       ],
       "retrieved": "2026-10-02",
+      "authors": [
+        "ambientCG"
+      ]
+    },
+    {
+      "id": "Fabric010",
+      "type": "material",
+      "name": "Fabric 010",
+      "url": "https://ambientcg.com/get?file=Fabric010_2K-JPG.zip",
+      "page": "https://ambientcg.com/view?id=Fabric010",
+      "license": "CC0-1.0",
+      "resolution": "2K",
+      "format": "jpg",
+      "path": "assets/materials/Fabric010/Fabric010_2K-JPG_Color.jpg",
+      "bytes": 2902512,
+      "sha256": "1314578569c03c178f9c5d07bbe4cdf135f4ee24c4ccf89288582ec403ac70c5",
+      "files": [
+        {
+          "path": "assets/materials/Fabric010/Fabric010_2K-JPG_Color.jpg",
+          "sha256": "1314578569c03c178f9c5d07bbe4cdf135f4ee24c4ccf89288582ec403ac70c5",
+          "bytes": 2902512
+        },
+        {
+          "path": "assets/materials/Fabric010/Fabric010_2K-JPG_NormalGL.jpg",
+          "sha256": "3d6a870397061c9abe5c08779269108c31588e0dae664bf7eca9ee486a5bbe05",
+          "bytes": 5830305
+        },
+        {
+          "path": "assets/materials/Fabric010/Fabric010_2K-JPG_Roughness.jpg",
+          "sha256": "5498ec2bffb40146a66311792284d65b4039fc1d0da8fe322ec3cf67f98af567",
+          "bytes": 1308172
+        }
+      ],
+      "maps": {
+        "color": "assets/materials/Fabric010/Fabric010_2K-JPG_Color.jpg",
+        "normal": "assets/materials/Fabric010/Fabric010_2K-JPG_NormalGL.jpg",
+        "roughness": "assets/materials/Fabric010/Fabric010_2K-JPG_Roughness.jpg"
+      },
+      "archive": {
+        "sha256": "e3bac608159c9b537a2db2bda78e14e12b5e7bf12c8b6a300a7796bbeeddbc9f",
+        "bytes": 19035414
+      },
+      "dimensions_cm": [
+        0,
+        0
+      ],
+      "retrieved": "2026-10-04",
       "authors": [
         "ambientCG"
       ]
@@ -661,6 +776,23 @@
       "authors": [
         "Flo Tasser"
       ]
+    },
+    {
+      "id": "route1",
+      "type": "panorama",
+      "name": "Japan National Route 1",
+      "url": "https://live.staticflickr.com/2291/2320233795_d9da5c6e3e_o.jpg",
+      "page": "https://www.flickr.com/photos/57552634@N00/2320233795",
+      "license": "CC-BY-2.0",
+      "path": "assets/panorama/route1/route1.jpg",
+      "bytes": 5022316,
+      "sha256": "0104c15d2b5aa916eaaa2dc3960ad28a6e4aa863ec19acb553a39fdfd783645a",
+      "retrieved": "2026-10-04",
+      "authors": [
+        "heiwa4126"
+      ],
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "切り出し・色調整あり"
     }
   ]
 }
