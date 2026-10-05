@@ -1,29 +1,29 @@
 {
   "version": 1,
-  "source": "route1",
+  "source": "cityscape",
   "image": "env/view.webp",
-  "width": 4096,
-  "height": 1025,
-  "lat_min_deg": -30.058594,
+  "width": 8192,
+  "height": 2049,
+  "lat_min_deg": -30.014648,
   "lat_max_deg": 60.029297,
   "scale": 16.0,
   "cap_rgb": [
-    0.50883,
-    0.7527,
-    1.09433
+    2.37291,
+    2.6635,
+    3.26891
   ],
   "center_mm": [
     11949,
     5986,
-    -1700.0
+    1600.0
   ],
   "ground_z_mm": -3300.0,
-  "radius_mm": 27000.0,
-  "camera_mm": 1600.0,
-  "rotation_deg": 180.0,
-  "gain_ev": 1.25,
+  "radius_mm": 31500.0,
+  "camera_mm": 4900.0,
+  "rotation_deg": 0.0,
+  "gain_ev": 1.14,
   "store_ev": 4.0,
   "clipped_ratio": 0.0,
-  "bytes": 442148,
-  "sha256": "94e47b8b07f32134dc55c5527a442d0d21db1eed5fff0bd741c8d3b5bb205548"
+  "bytes": 496096,
+  "sha256": "933728af3755b08a12ad61ceb6ea7a45b94608cbd800e97bb80ef45225b33ee4"
 }

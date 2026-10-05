@@ -16,6 +16,27 @@
       "retrieved": "2026-10-04",
       "authors": [
         "Andreas Mischok"
+      ],
+      "credit": false,
+      "note": "見える景観の候補（data/skyview.json）。配信していないので出典の一覧には出さない（credit: false）"
+    },
+    {
+      "id": "cityscape",
+      "type": "hdri",
+      "name": "梅田の街並み（自作の 360° の描画）",
+      "url": "blender/cityscape.py",
+      "generator": "tools/pipeline/cityscape.py",
+      "license": "CC0-1.0",
+      "credit": false,
+      "note": "この作業場で Blender の単純な箱のビルを組んで描いた自作の素材。出典の表示は要らない。空は kloofendal_overcast_puresky（CC0）。fetch_assets.py は取らず、tools/pipeline/cityscape.py で描き直す",
+      "resolution": "8k",
+      "format": "exr",
+      "path": "assets/hdri/cityscape/cityscape_8k.exr",
+      "bytes": 54774863,
+      "sha256": "a6120516b27edb6e1224d36f0f76415ee891c56e9953d858d2ac79aa10811dab",
+      "retrieved": "2026-10-05",
+      "authors": [
+        "crafts"
       ]
     },
     {
@@ -33,7 +54,9 @@
       "retrieved": "2026-10-04",
       "authors": [
         "Savva Zakharov"
-      ]
+      ],
+      "credit": false,
+      "note": "見える景観の候補（data/skyview.json）。配信していないので出典の一覧には出さない（credit: false）"
     },
     {
       "id": "kloofendal_overcast_puresky",
@@ -67,7 +90,9 @@
       "retrieved": "2026-10-04",
       "authors": [
         "Greg Zaal"
-      ]
+      ],
+      "credit": false,
+      "note": "見える景観の候補（data/skyview.json）。配信していないので出典の一覧には出さない（credit: false）"
     },
     {
       "id": "schadowplatz",
@@ -101,7 +126,9 @@
       "retrieved": "2026-10-04",
       "authors": [
         "Greg Zaal"
-      ]
+      ],
+      "credit": false,
+      "note": "見える景観の候補（data/skyview.json）。配信していないので出典の一覧には出さない（credit: false）"
     },
     {
       "id": "Carpet014",
@@ -776,23 +803,6 @@
       "authors": [
         "Flo Tasser"
       ]
-    },
-    {
-      "id": "route1",
-      "type": "panorama",
-      "name": "Japan National Route 1",
-      "url": "https://live.staticflickr.com/2291/2320233795_d9da5c6e3e_o.jpg",
-      "page": "https://www.flickr.com/photos/57552634@N00/2320233795",
-      "license": "CC-BY-2.0",
-      "path": "assets/panorama/route1/route1.jpg",
-      "bytes": 5022316,
-      "sha256": "0104c15d2b5aa916eaaa2dc3960ad28a6e4aa863ec19acb553a39fdfd783645a",
-      "retrieved": "2026-10-04",
-      "authors": [
-        "heiwa4126"
-      ],
-      "license_url": "https://creativecommons.org/licenses/by/2.0/",
-      "changes": "切り出し・色調整あり"
     }
   ]
 }
